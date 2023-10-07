@@ -1,0 +1,397 @@
+@import "./reset/_vars"
+
+
+.single .comments
+  #wpdcom .wpd-comment-header .wpd-comment-share,
+  #wpdcom .wpd-comment-header .wpd-comment-link
+    display: none
+  .by-wpdiscuz
+    display: none!important
+  #comments
+    margin: 0
+    background: transparent
+    width: 100%
+    max-width: 100%
+  #wpd-post-rating
+    width: 100%
+    margin-bottom: 70px
+    border: 1px solid rgba(#fff, .15)
+    border-radius: 24px
+    padding: 30px
+    margin-top: 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .wpd-rating-left,
+    .wpd-rating-right
+      display: none
+    .wpd-rating-wrap
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      .wpd-rating-data
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        flex-wrap: nowrap
+        flex-direction: row
+        position: relative
+        .wpd-rating-title
+          display: block
+          margin: 0
+          font-size: 22px
+          font-weight: 700
+          color: #fff
+          font-family: $font
+          margin-right: 30px
+          white-space: nowrap
+          width: max-content
+        .wpd-rate-starts
+          z-index: 10
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+          margin: 0
+          left: 200px
+        .wpd-rating-stars
+          display: flex
+          margin-top: 0
+        .wpd-rating-value
+          display: none
+  #wpdcom
+    margin: 0
+    width: 100%
+    max-width: 100%
+    background: transparent    
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    #wpd-threads
+      order: -1
+      margin-top: 0
+      .wpd-thread-head
+        margin-bottom: 0
+        .wpd-thread-filter
+          display: none
+        .wpd-info 
+          display: none
+    .wpd-form-wrap
+      width: 100%
+      .wpd-form-foot
+        margin-left: 0
+        .wpd-form-row
+          display: flex
+          justify-content: space-between
+          align-items: center
+          .wc-field-submit
+            padding: 0
+            margin: 0
+          .wpd-form-col-right
+            display: none
+          .wpd-form-col-left
+            width: 100%
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .wpdiscuz-item
+              width: calc(50% - (190px / 2) - 10px)
+              padding: 0
+              margin: 0
+              .wpd-field-icon
+                display: none
+              input.wpd-field
+                background: rgba(#fff, .05)
+                appearance: none
+                border: none
+                border-radius: 12px
+                height: 60px
+                width: 100%
+                max-width: 100%
+                box-shadow: none
+                color: #fff
+                font-family: $font
+                font-size: 16px
+                &:placeholder
+                  color: #fff
+                  font-family: $font
+                  font-size: 16px
+      input.wc_comm_submit
+        appearance: none
+        background-color: $main
+        transition: .2s
+        font-size: 16px
+        border-radius: 16px
+        font-weight: 500
+        font-family: $font
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 190px
+        box-shadow: none
+        margin: 0
+        margin-left: 0
+        margin-right: auto
+        padding: 0
+        height: 60px
+        &:hover
+          background-color: $button_hover
+      .wpd_label
+        display: none
+      .wpd-form-head
+        display: none 
+      .wc-field-textarea
+        .wpd-avatar
+          display: none
+        .ql-toolbar
+          display: none
+        .ql-container
+          background-color: rgba(#fff, .05)
+          border-radius: 16px
+          height: 155px
+          border: none!important
+          padding: 10px bor
+          &:before
+            color: #fff
+            font-size: 16px
+            font-style: normal
+          p
+            font-size: 16px
+            color: #fff
+            font: $font!important
+            font-style: normal
+  #wpd-threads
+    width: 100%
+    .wpd-thread-list  
+      width: 100%
+      .comment
+        background-color: rgba(#fff, .1)
+        backdrop-filter: blur(60px)
+        border-radius: 24px
+        padding: 30px
+        margin-bottom: 20px
+        width: 100%
+        .wpd-comment-footer
+          display: none
+        p
+          color: rgba(255, 255, 255, 0.7)
+          span
+            color: rgba(255, 255, 255, 0.7)!important
+  #wpdcom .wpd-thread-head 
+    border-bottom: none
+    margin-bottom: 40px
+    .wpd-thread-info
+      color: #fff
+      font-size: 42px
+      font-weight: 700
+      border-bottom: none
+      text-transform: none
+      span.wpdtc
+        display: none!important
+  #wpdcom .wpd-comment-author, #wpdcom .wpd-comment-author a
+    color: #fff
+  #wpdcom .wpd-comment .wpd-comment-right
+    padding-bottom: 0
+  .wpd-comment-wrap
+    &.wpd-blog-guest
+      .wpd-avatar 
+        height: 60px
+        width: 60px
+        border-radius: 100%
+        position: relative
+        img.avatar
+          display: none!important
+        &::after
+          position: absolute
+          content: ''
+          height: 60px
+          width: 60px
+          left: 0
+          top: 0
+          border-radius: 100%
+          background-repeat: no-repeat
+          background-size: contain
+          background-image: url(../img/icons/user.svg)
+    .wpd-avatar
+      img
+        display: block
+        width: 60px
+        object-fit: contain
+        border-radius: 100%
+  #wpdcom .wpd-comment .wpd-comment-header
+    display: block
+    padding: 0
+    margin-bottom: 20px
+    .wpd-comment-author 
+      display: block
+      margin-right: 0
+      margin-bottom: 12px
+      font-size: 20px
+      font-weight: 700
+    .wpd-comment-date
+      display: block
+      margin: 0
+      font-size: 16px
+      padding: 0
+      color: rgba(#fff, .5)
+      i
+        display: none
+
+.content
+  position: relative
+  .addtoany_content
+    position: absolute
+    bottom: -134px
+    right: 60px
+    margin: 0
+    padding: 0
+    .addtoany_list
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      a
+        height: 40px
+        width: 40px
+        margin: 0
+        padding: 0
+        margin-left: 10px
+        background-color: rgba(#fff, .05)
+        border-radius: 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        &.addtoany_share
+          display: none
+        span
+          display: flex
+          justify-content: center
+          align-items: center
+        svg
+          display: block
+          object-fit: contain
+          width: 24px
+          path
+            fill: #FE7300
+
+@media (max-width: 1245px)
+  .content .wp-block-group__inner-container .wp-block-image
+    display: flex
+    align-items: center
+    justify-content: center
+
+@media (max-width: 992px)
+  .content .wp-block-group__inner-container
+    display: block
+  .content .wp-block-group__inner-container .wp-block-group
+    width: 100%
+  .content .wp-block-group__inner-container .wp-block-image
+    width: 100%
+
+@media (max-width: 767px)
+  .content .wp-block-group__inner-container .wp-block-image
+    margin-bottom: 30px
+  .single .comments #wpd-post-rating
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    padding: 20px
+    padding-bottom: 90px
+    .wpd-rating-wrap
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: flex-start
+      .wpd-rating-data
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        width: 100%
+        .wpd-rating-title
+          margin-right: 0
+          margin-bottom: 20px
+  .content .addtoany_content
+    right: auto
+    left: 50%
+    transform: translateX(-50%)
+    bottom: -220px
+  .single .comments #wpd-post-rating .wpd-rating-wrap .wpd-rating-data .wpd-rate-starts
+    left: 50% 
+    transform: translateX(-50%)
+    top: 36px
+  .single .comments #wpd-threads .wpd-thread-list .comment
+    padding: 25px
+    display: block
+  #wpdcom .wpd-comment .wpd-comment-wrap
+    display: block
+    position: relative
+  #wpdcom .wpd-comment .wpd-comment-left
+    position: absolute
+    left: 0
+    top: 0
+    margin: 0
+    .wpd-comment-label
+      display: none
+  .single .comments #wpdcom .wpd-comment .wpd-comment-right
+    padding-left: 75px
+    width: 100%
+    display: block
+  .single .comments #wpdcom .wpd-comment .wpd-comment-header
+    margin-bottom: 20px
+    padding-top: 8px
+    .wpd-comment-author 
+      font-size: 16px 
+      margin-bottom: 6px
+    .wpd-comment-date
+      font-size: 14px
+  #wpdcom .wpd-comment-text
+    min-width: calc(100% + 75px)
+    position: relative
+    left: -75px
+    padding-bottom: 0
+  .single .comments #wpdcom .wpd-form-wrap .wpd-form-foot .wpd-form-row
+    display: block
+    .wpd-form-col-left
+      display: block
+  .single .comments #wpdcom .wpd-form-wrap .wpd-form-foot .wpd-form-row .wpd-form-col-left .wpdiscuz-item
+    width: 100%
+    margin-bottom: 10px
+  .single .comments #wpdcom .wpd-form-wrap input.wc_comm_submit
+    width: 100%
+    max-width: 100%
+    margin: 0
+
+
+
+
+@media (max-width: 578px)
+  .single .author 
+    margin-bottom: 30px
+    .top-rat, .views, .read-time
+      margin-bottom: 10px
+      margin-right: 10px
+  .single .thumb 
+    margin-bottom: 30px
+    img
+      aspect-ratio: 320 / 237
+      object-fit: cover
+  .single .comments #wpdcom .wpd-thread-head .wpd-thread-info
+    font-size: 32px
+  #wpdcom.wpd-layout-1 .wpd-comment .wpd-avatar img, #wpdcom.wpd-layout-1 .wpd-comment .wpd-avatar img.avatar
+    min-width: 60px
+    height: 60px
+
+
+
+
+
+
+
+
+@import "./_popup"
+
+
+
+
+
+

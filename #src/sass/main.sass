@@ -1,0 +1,13488 @@
+@import "./reset/_vars"
+@import "./assets/_main-wp"
+      
+
+
+
+.advantages
+  .title
+    margin-bottom: -55px
+  &-wrap
+    &-img
+      position: relative
+      z-index: 2
+      margin: auto
+      display: block
+      width: max-content
+      max-width: 100%
+      margin-bottom: -90px
+      img
+        display: block
+        width: 730px
+        max-width: 100%
+    &-cards
+      display: flex
+      justify-content: space-between
+      align-items: stretch
+      position: relative
+      z-index: 3
+      .item
+        width: calc(25% - (60px / 4))
+        margin-bottom: 20px
+        border-radius: 24px 
+        background-color: rgba(255, 255, 255, 0.10)
+        backdrop-filter: blur(60px)
+        padding: 30px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: space-between
+        height: 210px
+        b
+          font-size: 18px
+          color: #fff
+        .icon
+          display: block
+          img
+            width: 40px
+    &-text
+      display: flex
+      justify-content: space-between
+      align-items: stretch
+      .item
+        display: flex
+        flex-direction: column
+        border-radius: 24px
+        padding: 40px
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+        
+        width: calc(50% - 10px)
+        aspect-ratio: 1 / 0.92
+        p
+          font-size: 18px
+          display: block
+          margin-bottom: 15px
+          &:last-child
+            margin-bottom: 0
+        b, h3,h2,h4,h1,h5
+          font-size: 38px
+          display: block
+          margin-bottom: 20px
+          line-height: 1
+      .left
+        background-color: $main
+      .right
+        b
+          max-width: 310px
+
+.reviews
+  &-main
+    position: relative
+    &::after
+      position: absolute
+      content: ''
+      height: 90px
+      width: 90px
+      background-repeat: no-repeat
+      background-size: contain
+      background-image: url(../img/icons/yelp.svg)
+      right: -15px
+      top: -45px
+      transform: rotate(30deg)
+      z-index: 11 
+  &-wrap
+    align-items: stretch
+  &-slider
+    .item
+      border-radius: 24px
+      padding: 30px
+      background-color: rgba(255, 255, 255, 0.10)
+      backdrop-filter: blur(60px)
+      position: relative
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      height: auto
+      flex-direction: column
+      p
+        font-size: 18px
+        margin-bottom: 30px
+      &-bottom
+        display: flex
+        margin-bottom: 0
+        align-items: center
+        margin-top: auto
+        .name
+          display: block
+          b
+            font-size: 20px
+            display: block
+            margin-bottom: 10px
+          small
+            font-size: 16px
+            display: block
+            color: rgba(#fff, .5)
+        .icon
+          width: 60px
+          display: block
+          margin-right: 15px
+          img
+            width: 100%
+            display: block
+            aspect-ratio: 1 / 1
+
+.star-rating
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  margin-bottom: 20px
+  img
+    display: block
+    margin-right: 10px
+    object-fit: contain
+    width: 24px
+    &:last-child
+      margin-right: 0
+
+.swiper
+  position: relative
+  overflow: hidden
+  &-nav
+    position: relative
+    .arr
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      cursor: pointer
+      height: 24px
+      width: 24px
+      display: block
+      svg
+        transition: .2s
+      &:hover
+        svg
+          transition: .2s
+          path
+            fill: $main
+      &-prev
+        left: -44px
+      &-next
+        right: -44px
+      &.swiper-button-disabled
+        pointer-events: none
+        opacity: .5
+
+.how
+  &-wrap
+    position: relative
+    .arrows
+      position: absolute
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      right: 0
+      top: -65px
+      .arr
+        border-radius: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 45px
+        width: 45px
+        margin-left: 25px
+        background-color: rgba(255, 255, 255, 0.05)
+      .arr
+        position: static
+    &-slider
+      overflow: visible
+    .item
+      background-color: rgba(255, 255, 255, 0.10)
+      border-radius: 24px 
+      padding: 5px
+      height: auto
+      img
+        border-radius: 20px
+        display: block
+        margin-bottom: 25px
+        aspect-ratio: 156 / 115
+        width: 100%
+        object-fit: cover
+      small
+        font-size: 16px
+        color: rgba(#fff, .5)
+        display: block
+        margin-bottom: 10px
+        padding: 0 25px
+      b
+        padding: 0 25px
+        margin-bottom: 20px
+        font-size: 18px
+        display: block
+
+.get
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    color: #fff
+    background-color: $main
+    border-radius: 24px 
+    padding: 30px 50px
+    b
+      font-size: 32px
+      display: block
+      width: 190px
+    p
+      font-size: 18px
+      display: block
+      width: 354px
+  &-form
+    display: flex
+    width: 490px
+    align-items: center
+    justify-content: center
+    padding: 5px
+    background-color: #fff
+    border-radius: 18px
+    .input
+      width: 33.3%
+      border-radius: 16px
+      position: relative
+      input
+        border-radius: 16px
+        height: 60px
+        border: none
+        font-size: 16px
+        color: $text_dark
+        &:placeholder
+          color: red
+          font-size: 18px
+    .button
+      max-width: 33.3%
+      border-radius: 16px
+      height: 60px
+      border-radius: 16px
+
+.input
+  border-radius: 16px
+  position: relative
+  p
+    position: absolute
+    display: none
+    left: 20px
+    color: rgba(47, 43, 67, 0.50)
+    font-size: 12px
+    left: 15px
+    top: 10px
+  textarea
+    border-radius: 16px
+    height: 155px
+    resize: none
+    border: none
+    font-size: 16px
+    color: $text_dark
+    width: 100%
+    max-width: 100%
+    display: block
+    padding-top: 20px
+    &:placeholder
+      color: $text_dark
+      font-size: 18px
+  input
+    border-radius: 16px
+    height: 60px
+    border: none
+    font-size: 16px
+    color: $text_dark
+    display: block
+    width: 100%
+    max-width: 100%
+    &:placeholder
+      color: $text_dark
+      font-size: 18px
+  &.listen
+    input
+      padding-top: 30px
+    textarea
+      padding-top: 30px
+    p
+      display: block
+
+.about-us
+  &-video
+    aspect-ratio: 1216 / 617
+    display: block
+    position: relative
+    z-index: 2
+    margin-bottom: 20px
+    cursor: pointer
+    border-radius: 24px
+    transition: .2s
+    &:after
+      position: absolute
+      content: ''
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      background-repeat: no-repeat
+      background-size: contain
+      background-image: url(../img/icons/play.svg)
+      z-index: 2
+      width: 72px
+      height: 72px
+      transition: .2s
+    &::before
+      position: absolute
+      content: ''
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      height: 100%
+      width: 100%
+      border-radius: 24px
+      transition: .2s
+      z-index: 1
+      background-color: rgba(#000, .2)
+    &:hover
+      &::before
+        transition: .2s
+        background-color: rgba(#000, 0)
+      &::after
+        transition: .2s
+        transform: translate(-50%, -50%) scale(1.2)
+    iframe
+      width: 100%
+      max-width: 100%
+      aspect-ratio: 1216 / 617
+      display: none
+      border-radius: 24px
+    img
+      display: block
+      width: 100%
+      aspect-ratio: 1216 / 617
+      border-radius: 24px
+      position: relative
+    &.active
+      &::after
+        display: none
+      &::before
+        display: none
+  &-features
+    display: flex
+    align-items: stretch
+    justify-content: space-between
+    .item
+      width: calc(25% - (60px / 4))
+      border-radius: 24px
+      background-color: rgba(#fff, 0.05)
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      aspect-ratio: 289 / 212
+      b
+        font-size: 64px
+        display: block
+        text-align: center
+        margin-bottom: 10px
+      p
+        font-size: 16px
+        color: $text_gray
+
+.team
+  .title
+    margin-bottom: 20px
+  .subtitle
+    margin-left: auto
+    margin-right: auto
+  &-wrap
+    .arr
+      transform: none
+      top: 88px
+      z-index: 10
+      &-prev
+        left: -34px 
+      &-next
+        right: -34px  
+  &-slider
+    align-items: stretch
+    &-item
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: flex-start
+      img
+        display: block
+        border-radius: 100%
+        object-fit: cover
+        width: 100%
+        aspect-ratio: 1 / 1
+      .img
+        display: block
+        height: 200px
+        aspect-ratio: 1 / 1
+        border-radius: 100%
+        background-color: #fff
+        margin-bottom: 20px
+      b
+        font-size: 20px
+        display: block
+        margin-bottom: 10px
+        text-align: center
+      p
+        color: $gray_text
+        display: block
+        text-align: center
+        font-size: 16px
+
+.hiring
+  &-wrap
+    aspect-ratio: 1216 / 622
+    padding: 50px
+    border-radius: 24px
+    overflow: hidden
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: top left
+    .item
+      width: 100%
+      max-width: 504px
+      padding: 60px
+      border-radius: 30px
+      background: rgba(255, 255, 255, 0.10)
+      backdrop-filter: blur(60px)
+      position: relative
+      padding-right: 100px
+      img
+        display: block
+        position: absolute
+        right: -66px
+        bottom: -74px
+        z-index: 3
+    b
+      font-size: 40px
+      display: block
+      margin-bottom: 25px
+    p
+      font-size: 18px
+      display: block
+      margin-bottom: 25px
+    .button
+      max-width: 162px
+
+.destination
+  &-wrap
+    display: flex
+    justify-content: flex-start
+    align-items: stretch
+    flex-wrap: wrap
+    gap: 40px
+  ul
+    display: flex
+    flex-direction: column
+    li
+      a,div
+        display: flex
+        font-size: 18px
+        margin-bottom: 15px
+        color: #fff
+        &:hover
+          color: $main
+      div
+        &:hover
+          color: #fff
+
+.question
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    background-color: $main
+    border-radius: 30px
+    padding: 50px
+  .left
+    b
+      font-size: 42px
+      display: block
+      margin-bottom: 15px
+    p
+      font-size: 18px
+      max-width: 300px
+  .right
+    width: 600px
+  form
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    .wpcf7-spinner
+      position: absolute
+      bottom: 0
+      right: 0
+    .full
+      margin-bottom: 15px
+      width: 100%
+    .half
+      width: calc(50% - 15px - 60px)
+    .button
+      width: 120px
+    
+.blog
+  &-slider
+    position: relative
+    z-index: 5
+  &-wrap
+    justify-content: space-between
+    position: relative
+    z-index: 2
+    &-item
+      width: calc(25% - (60px / 4))
+      border-radius: 24px
+      background-color: rgba(255, 255, 255, 0.10)
+      padding: 5px
+      height: auto
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      position: relative
+      z-index: 2
+      &:hover
+        b, .date
+          color: $main
+      img
+        display: block
+        margin-bottom: 20px
+        border-radius: 24px
+        width: 100%
+        aspect-ratio: 279 / 190
+        object-fit: cover
+      .date
+        color: $text_gray
+        font-size: 16px
+        display: block
+        margin-bottom: 10px
+        padding: 0 20px
+        transition: .2s
+      b
+        font-size: 18px
+        font-weight: 500
+        padding: 0 20px
+        padding-bottom: 20px
+        transition: .2s
+    
+.footer
+  padding: 60px 0
+  border-top: 1px solid rgba(255, 255, 255, 0.15) 
+  &-menu
+    .google
+      display: block
+      margin-bottom: 35px
+    ul
+      display: block
+      margin-bottom: 30px
+    b
+      font-size: 20px
+      display: block
+      margin-bottom: 15px
+      color: #fff
+    a
+      display: block
+      color: rgba(#fff, .7)
+      font-size: 18px
+      margin-bottom: 15px
+      &:hover
+        color: $main
+    .copyright
+      color: rgba(#fff, .7)
+      font-size: 18px
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+  &-social
+    display: block
+    a
+      height: 44px
+      border-radius: 10px
+      border: 1px solid rgba(#fff, .15)
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 0 10px
+      margin-bottom: 8px
+      width: max-content
+      &:hover
+        background-color: $main
+      img
+        display: block
+        margin-right: 10px
+  &-logo
+    display: block
+    margin-bottom: 50px
+  &-contacts
+    display: block
+    margin-bottom: 35px
+    a:hover
+      color: $main
+    .phone
+      font-size: 20px
+      display: block
+      margin-bottom: 10px
+      font-weight: 700
+    .email
+      font-weight: 400
+      font-size: 18px
+
+@media (max-width: 1245px)
+  .title-reverse
+    font-size: 100px
+    margin-bottom: -25px
+  .advantages-wrap-text .item 
+    b,h2,h3,h4
+      font-size: 30px
+  .get-wrap p
+    padding-right: 20px
+  .about-us-features .item b
+    font-size: 50px
+  .hiring-wrap
+    background-size: 1185px
+  .destination ul li a,
+  .destination ul li div
+    font-size: 16px
+  .blog-wrap-item 
+    b
+      font-size: 16px
+    .date
+      font-size: 14px
+  .footer-menu a
+    font-size: 14px
+
+@media (max-width: 992px)
+  .title
+    &.title-reverse
+      font-size: 92px
+      margin-bottom: -20px
+  .advantages-wrap
+    &-text
+      display: block
+      .item
+        width: 100%
+        margin-bottom: 10px
+        &.left
+          aspect-ratio: auto
+    &-cards 
+      flex-wrap: wrap
+      margin-bottom: 30px
+      .item
+        width: calc(50% - 10px)
+        margin-bottom: 20px
+        height: auto
+  .how-wrap
+    .arrows
+      display: none
+  .get
+    .get-wrap
+      display: block
+      padding: 20px
+      p,b
+        width: 100%
+        margin-bottom: 20px
+      .get-form
+        width: 100%
+  .about-us-features .item
+    width: calc(25% - 10px)
+    b
+      font-size: 40px
+    p
+      font-size: 14px
+  .team
+    .title
+      margin-bottom: 20px
+  .hiring-wrap
+    aspect-ratio: 4 / 3
+  .destination-wrap
+    gap: 20px 20px
+    flex-wrap: wrap
+    justify-content: flex-start
+    ul
+      width: calc(25% - 20px)
+  .question-wrap 
+    display: block
+    .left
+      width: 100%
+      margin-bottom: 20px
+    .right
+      width: 100%
+  .blog-slider
+    overflow: visible
+  .mob-hidden
+    display: none!important
+  .footer
+    display: block
+    padding-top: 40px
+    &-social
+      display: flex
+      margin-bottom: 20px
+      a
+        margin: 0 4px
+    &-contacts
+      a
+        text-align: center
+    &-wrap
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: flex-start
+    &-menu
+      width: 100%
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      flex-wrap: wrap
+      .google
+        width: 100%
+        display: flex
+        justify-content: center
+      .privacy, .copyright
+        margin-bottom: 0
+        font-size: 14px
+        margin-left: 10px
+        margin-right: 10px
+    &-left
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+  .footer-logo
+    margin-bottom: 30px
+  .footer-menu .google
+    margin-bottom: 30px
+  #menu-footer-calculate
+    display: none
+
+@media (max-width: 767px)
+  .about-us-features 
+    flex-wrap: wrap
+    .item
+      width: calc(50% - 5px)
+      margin-bottom: 10px
+      min-height: 100px
+      aspect-ratio: unset
+      b
+        font-size: 28px
+        margin-bottom: 2px
+      p
+        font-size: 14px
+  .about-us-video:after
+    height: 38px
+    width: 38px
+  .hiring-wrap 
+    aspect-ratio: unset
+    padding: 0
+    padding-top: 240px
+    background-size: 100%
+    .item
+      width: 100%
+      max-width: 100%
+      padding: 25px
+      border-radius: 0 0 24px 24px
+      img
+        display: none
+  .destination-wrap
+    gap: 20px 27px
+    ul
+      width: max-content
+  .question-wrap
+    padding: 20px
+    .left
+      margin-bottom: 20px
+      b
+        font-size: 30px
+        margin-bottom: 10px
+      p
+        font-size: 14px
+        margin-bottom: 0
+    form
+      .half
+        width: 100%
+        max-width: 100%
+        margin-bottom: 10px
+      .full
+        margin-bottom: 10px
+      .button
+        width: 100%
+        max-width: 100%
+
+@media (max-width: 578px)
+  .title.title-reverse
+    font-size: 52px
+  .advantages
+    &-wrap
+      &-img
+        margin-bottom: -35px
+      &-cards
+        margin-bottom: 20px
+        .item
+          width: calc(50% - 5px)
+          margin-bottom: 10px
+          padding: 20px
+          aspect-ratio: 155 / 134
+          b
+            font-size: 14px
+            font-weight: 500
+          .icon
+            margin-bottom: 15px
+            img
+              height: 24px
+              width: 24px
+  .advantages-wrap-text 
+    .item
+      padding: 20px
+      &.right
+        aspect-ratio: 321 / 291
+      &.left
+        b,h2,h4,h3
+          font-size: 24px
+          margin-bottom: 20px
+        p
+          font-size: 14px
+  .title
+    font-size: 30px
+    margin-bottom: 20px
+  .reviews
+    &-main
+      &:after
+        height: 60px
+        width: 60px
+        right: 0
+        top: -80px
+    .title
+      padding-right: 70px
+  .reviews-slider .item
+    padding: 25px
+    p
+      font-size: 16px
+      margin-bottom: 20px
+    .star-rating
+      margin-bottom: 10px
+      img
+        width: 15px
+        object-fit: contain
+        margin-right: 10px
+  .reviews-slider .item-bottom
+    margin-top: 0
+    width: 100%
+  .reviews-slider .item-bottom .name
+    b
+      font-size: 16px
+    small
+      font-size: 16px
+  .reviews-slider .item-bottom .icon
+    width: 50px
+    img
+      width: 100%
+      object-fit: contain
+  .reviews-main
+    padding-right: 30px
+    .swiper
+      overflow: visible
+  .subtitle
+    font-size: 14px
+    margin-bottom: 25px
+  .how-wrap
+    padding-right: 55px
+  .how-wrap .item 
+    small
+      font-size: 14px
+      margin-bottom: 10px
+    b
+      font-size: 16px
+  .get .get-wrap
+    b
+      font-size: 30px
+      margin-bottom: 10px
+    p
+      margin-bottom: 20px
+      font-size: 14px
+  .get .get-wrap .get-form
+    display: block
+    padding: 0
+    padding-bottom: 10px
+    .input
+      width: 100%
+      max-width: 100%
+      &:first-child
+        border-bottom: 1px solid rgba(47, 43, 67, 0.15)
+        border-radius: 16px 16px 0 0
+    .button
+      width: 100%
+      margin-right: 10px
+      margin-left: 10px
+      max-width: calc(100% - 20px)
+  .about-us
+    margin-bottom: 30px
+    .title
+      margin-bottom: -10px
+    &-video
+      aspect-ratio: 321 / 200
+      margin-bottom: 10px
+      img
+        width: 100%
+        aspect-ratio: 321 / 200
+      iframe
+        aspect-ratio: 321 / 200
+  .team
+    .subtitle
+      text-align: center
+    &-wrap
+      overflow: visible
+      padding-right: 140px
+      .swiper
+        overflow: visible
+  .hiring-wrap
+    background-size: 600px
+    background-position: top right
+  .destination
+    .button
+      width: 100%
+      max-width: 100%
+      background-color: rgba(255, 255, 255, 0.05)
+  .destination-wrap 
+    overflow: hidden
+    gap: 0
+    &.show-more
+      ul
+        li
+          &:nth-child(3)
+            opacity: .8
+          &:nth-child(4)
+            opacity: .7
+          &:nth-child(5)
+            opacity: .6
+          &:nth-child(6)
+            opacity: .5
+          &:nth-child(7)
+            opacity: .4
+          &:nth-child(8)
+            opacity: .3
+    ul
+      width: calc(50% - 20px)
+      margin-bottom: 0px
+  .blog
+    .title
+      margin-bottom: -15px
+    &-slider
+      padding-right: 35px
+
+@media (max-width: 440px)
+  .hiring-wrap
+    padding-top: 215px
+    background-size: 470px
+    b
+      font-size: 26px
+      margin-bottom: 10px
+    p
+      font-size: 16px
+      margin-bottom: 24px
+    .button
+      width: 100%
+      max-width: 100%
+
+@media (max-width: 370px)
+  .team-wrap
+    padding-right: 80px
+
+.no-label
+  .reviews-main::after
+    display: none
+
+.reviews-offer
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+  margin-bottom: 60px
+  .left
+    width: 900px
+    h1
+      font-size: 64px
+      display: block
+      margin-bottom: 30px
+    .button
+      max-width: 190px
+    .text
+      display: block
+      margin-bottom: 30px
+      font-size: 18px
+      line-height: 1.6
+  .right
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    img
+      display: block
+      margin-left: 15px
+
+.reviews-list
+  &.show-more
+    .button
+      max-width: 100%
+      border: 1px solid rgba(255, 255, 255, 0.15)
+      color: rgba(255, 255, 255, 0.70)
+      font-size: 16px
+      font-weight: 600
+      height: 60px
+      &:hover
+        background-color: $main
+        color: #fff
+        transition: .2s
+    .item
+      display: none
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5)
+        display: block
+  .item
+    display: block
+    margin-bottom: 20px
+    border-radius: 24px 
+    background-color:  rgba(255, 255, 255, 0.10)
+    backdrop-filter: blur(60px)  
+    padding: 30px
+    .top
+      display: flex
+      align-items: stretch
+      justify-content: flex-start
+      margin-bottom: 20px
+      .star-rating
+        margin-bottom: 0
+      &-right
+        display: block
+        .star-rating
+          img
+            width: 20px
+            height: 20px
+            margin-right: 6px
+        .name-date
+          display: flex
+          align-items: center
+          justify-content: flex-start
+          margin-bottom: 12px
+          b
+            font-size: 20px
+            font-weight: 700
+            display: block
+            margin-right: 20px
+          p
+            font-size: 16px
+            color: rgba(#fff, .5)
+      .avatar
+        display: flex
+        margin-right: 15px
+        img
+          display: block
+          width: 60px
+          object-fit: contain
+          border-radius: 100%
+          height: 60px
+    .content
+      p,li,strong
+        color: #fff
+
+@media (max-width: 1245px)
+  .reviews-offer .left
+    width: 640px
+    h1
+      font-size: 54px
+
+@media (max-width: 992px)
+  .reviews-offer 
+    display: block
+    position: relative
+    padding-bottom: 100px
+    .button
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+    .right
+      width: 100%
+      justify-content: center
+    .left
+      width: 100%
+      h1
+        text-align: center
+      .text
+        text-align: center
+
+.page-title
+  font-size: 64px
+  display: block
+  margin-bottom: 30px
+
+@media (max-width: 1245px)
+  .page-title
+    font-size: 54px
+
+@media (max-width: 767px)
+  .page-title
+    font-size: 34px
+    margin-bottom: 15px
+  .reviews-offer 
+    padding-bottom: 80px
+    .button
+      height: 50px
+      max-width: 190px
+    .left 
+      h1
+        font-size: 34px
+        margin-bottom: 15px
+      .text
+        font-size: 16px
+        margin-bottom: 15px
+
+@media (max-width: 578px)
+  .bg-section.bg-section-top 
+    background-position: -40px -70px
+    background-size: 150%
+  .reviews-offer .right img
+    margin: 0 7px
+  .reviews-list 
+    .item 
+      padding: 25px
+      .top
+        .avatar
+          display: flex
+          align-items: center
+      .top-right 
+        .name-date
+          margin-bottom: 0
+          display: block
+          b
+            font-size: 16px
+            margin-bottom: 6px
+          p
+            font-size: 14px
+            margin-bottom: 6px
+        .star-rating
+          margin-bottom: 0
+          img
+            height: 16px
+            width: 16px
+            margin-right: 6px
+
+.contacts
+  .offer-wrap-cards.contacts-cards
+    margin-top: 0
+    justify-content: space-between
+    margin-bottom: 70px
+    .offer-wrap-cards-item
+      width: calc(33.3% - (40px / 3))
+      margin-right: 0
+      min-height: 180px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+  &-row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 60px
+    &-right
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      a
+        background-color: rgba(#fff, .1)
+        border-radius: 10px
+        height: 48px
+        padding: 0 16px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #fff
+        font-size: 18px
+        font-weight: 400
+        margin-left: 12px
+        &:hover
+          background-color: $main
+          svg
+            path
+              fill: #fff
+        svg
+          display: block
+          margin-right: 10px
+    &-left
+      display: flex
+      justify-content: flex-start
+      align-items: center
+    .item
+      display: block
+      margin-right: 80px
+      p
+        font-size: 18px
+        font-weight: 400
+      a
+        font-size: 26px
+        display: block
+        font-weight: 700
+        margin-bottom: 12px
+        &:hover
+          color: $main
+  &-map
+    position: relative
+    img, iframe
+      width: 100%
+      height: 700px
+      object-fit: cover
+      max-width: 1440px
+      border-radius: 24px
+      margin: auto
+      display: block
+      z-index: 1
+      border: none
+    .wrapper
+      padding-right: 5px
+      margin-top: 90px
+      max-width: 430px
+      width: 100%
+      border-radius: 24px
+      overflow: hidden
+      backdrop-filter: blur(47px)
+      background-color: rgba(#fff, .1)
+      position: absolute
+      left: calc(50% + (1215px / 3))
+      transform: translateX(-50%)
+      top: 0
+      z-index: 50
+    &-wrap
+      overflow: scroll
+      overflow-x: hidden
+      height: 580px
+      &::-webkit-scrollbar //скроллбар
+        width: 6px 
+        background-color: transparent
+      &::-webkit-scrollbar-thumb //ползунок
+        background-color: rgba(255, 255, 255, 0.10)
+        border-radius: 4px
+      &::-webkit-scrollbar-button:vertical:start:decrement
+        background-color: transparent
+      &::-webkit-scrollbar-button:vertical:end:increment
+        background-color: transparent
+      &-item
+        display: block
+        padding: 30px
+        border-bottom: 1px solid rgba(255, 255, 255, 0.10)
+        b
+          font-size: 22px
+          display: block
+          margin-bottom: 10px
+        adress
+          font-size: 18px
+          display: block
+          margin-bottom: 10px
+        a
+          font-size: 18px
+          font-weight: 700
+          margin-right: 15px
+          white-space: nowrap
+          &:hover
+            color: $main
+        &-row
+          display: flex
+          align-items: center
+          justify-content: flex-start
+        .icon
+          display: block
+          margin-right: 10px
+        span
+          color: rgba(#fff, .5)
+          font-size: 18px
+  &-question
+    &.question
+      margin-top: 100px
+      .button
+        background-color: $main
+        &:hover
+          background-color: #000
+      .input
+        p
+          color: rgba(#fff, .5)
+        input, textarea
+          color: #fff
+          background-color: rgba(255, 255, 255, 0.05)
+          &::placeholder
+            color: #fff
+      .question-wrap
+        background-color: transparent
+        padding: 0
+        .right
+          width: 750px
+
+@media (max-width: 1245px)
+  .contacts-row .item
+    margin-right: 40px  
+  .contacts-map
+    .wrapper
+      left: calc(50% + (970px / 4) + 30px)
+
+@media (max-width: 992px)
+  .contacts-row
+    display: block
+    &-left
+      width: 100%
+      display: block
+    &-right
+      width: 100%
+      justify-content: flex-start
+      a
+        margin-right: 12px
+        margin-left: 0
+    .item
+      margin-right: 0
+      margin-bottom: 20px
+      a
+        font-size: 20px
+        margin-bottom: 8px
+      p
+        font-size: 14px
+  .contacts-question.question .question-wrap .right
+    width: 100%
+  .contacts-map
+    .wrapper
+      left: calc(50% + (740px / 4) + 30px)
+      max-width: 380px
+
+@media (max-width: 767px)
+  .contacts 
+    &-row
+      margin-bottom: 30px
+    &-map
+      margin-bottom: 490px
+      .wrapper
+        margin-top: 550px
+        height: 500px
+        left: calc(50%)
+      &-wrap
+        width: 100%
+        max-width: 100%
+        padding-bottom: 80px
+        &-item
+          padding: 24px
+          adress
+            font-size: 14px
+          span
+            font-size: 14px
+          a
+            font-size: 16px
+          b
+            font-size: 18px
+      img, iframe
+        height: 600px
+        width: 100%
+        object-fit: cover
+    .offer-wrap-cards.contacts-cards
+      display: block
+      margin-bottom: 40px
+      .offer-wrap-cards-item
+        width: 100%
+        margin-bottom: 10px
+        height: auto
+        padding: 20px
+        min-height: 0
+        b
+          margin-bottom: 15px
+          font-size: 16px
+        p
+          font-size: 12px
+
+@media (max-width: 578px)
+  .breadcrumbs
+    margin-bottom: 20px
+    span,a
+      font-size: 12px
+  .contacts
+    &-map
+      .wrapper
+        max-width: 100%
+        width: 100%
+
+.about-us
+  margin-bottom: 60px
+  .title
+    margin-bottom: 30px
+  .content
+    p,li
+      color: #fff
+
+.bg-section-about
+  background-repeat: no-repeat
+  background-size: 100%
+  background-image: url(../img/afvant-bg.svg)
+  background-position: center center
+  position: relative
+  z-index: 1
+
+.mission
+  position: relative
+  z-index: 1
+  .page-title
+    text-align: center
+    margin-bottom: 100px
+  .image
+    display: block
+    margin-bottom: 20px
+    img
+      display: block
+      border-radius: 24px
+      width: 100%
+      aspect-ratio: 1216 / 623
+
+.team
+  position: relative
+  z-index: 2
+
+.diff
+  position: relative
+  &::after
+    position: absolute
+    content: ''
+    aspect-ratio: 1406 / 1719
+    width: 100%
+    background-repeat: no-repeat
+    background-size: cover
+    background-image: url(../img/diff-bg.svg)
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 0
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    position: relative
+    z-index: 2
+    .item
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      justify-content: space-between
+      aspect-ratio: 1 / 1
+      width: calc(25% - (60px / 4))
+      border-radius: 24px
+      padding: 30px
+      background: rgba(255, 255, 255, 0.10)
+      backdrop-filter: blur(60px)
+      img
+        display: block
+      p
+        font-size: 16px
+        display: block
+        margin-bottom: 0
+        margin-top: auto
+        color: #fff
+      b
+        font-size: 18px
+        display: flex
+        margin-bottom: 15px
+      .icon
+        display: block
+        margin-top: 0
+
+.history
+  position: relative
+  &::after
+    position: absolute
+    content: ''
+    background-image: url(../img/history-bg.svg)
+    background-repeat: no-repeat
+    background-size: cover
+    aspect-ratio: 1440 / 1719
+    width: 100%
+    left: 50%
+    transform: translateX(-50%)
+    bottom: -700px
+  .title
+    margin-bottom: 100px
+  .item
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 200px
+    position: relative
+    z-index: 2
+    &:last-child
+      margin-bottom: 0
+    .num
+      font-size: 140px
+      font-weight: 700
+      line-height: 1
+      background: linear-gradient(180deg, #FE7300 8.21%, rgba(254, 115, 0, 0.00) 100%)
+      background-clip: text
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      margin-bottom: -65px
+    b
+      max-width: 700px
+      font-size: 64px
+      text-align: center
+      display: block
+      margin-bottom: 25px
+    p
+      font-size: 18px
+      max-width: 700px
+      text-align: center
+      display: block
+
+@media (max-width: 1245px)
+  .diff-wrap .item
+    aspect-ratio: auto
+    width: calc(25% - 10px)
+    padding: 25px
+    img
+      margin-bottom: 20px
+
+@media (max-width: 992px)
+  .diff-wrap 
+    flex-wrap: wrap
+    .item
+      aspect-ratio: auto
+      width: calc(50% - 10px)
+      margin-bottom: 20px
+  .history 
+    margin-bottom: 60px
+    .title
+      margin-bottom: 40px
+
+@media (max-width: 767px)
+  .mission .page-title
+    margin-bottom: 30px
+    font-size: 24px
+  .mission-wrap
+    .advantages-wrap-text
+      .item
+        aspect-ratio: auto
+  .history 
+    .item 
+      margin-bottom: 90px
+      &:last-child
+        margin-bottom: 0
+      .num
+        font-size: 80px
+        margin-bottom: -30px
+      b
+        font-size: 30px
+      p
+        font-size: 14px
+  
+@media (max-width: 578px)
+  .mission-wrap .advantages-wrap-text
+    .item
+      &.right
+        h2,h3,h4,h5,b
+          font-size: 24px
+  .diff-wrap .item
+    width: 100%
+    margin-bottom: 10px
+
+.vacancy
+  &-menu
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    align-items: center
+    margin-bottom: 40px
+    .item
+      border-radius: 12px
+      height: 55px
+      margin-right: 15px
+      margin-bottom: 15px
+      padding: 0 25px
+      display: flex
+      justify-content: center
+      align-items: center
+      border: 1px solid #fff
+      transition: .2s
+      cursor: pointer
+      color: #fff
+      &:hover
+        background-color: $main
+        border-color: $main
+      &.active
+        background-color: $main
+        border-color: $main
+  &-wrap
+    .item
+      border-radius: 24px
+      background: rgba(255, 255, 255, 0.10)
+      backdrop-filter: blur(60px)
+      padding: 30px
+      margin-bottom: 20px
+      p
+        &>strong
+          display: block
+          margin-bottom: -10px
+      &-title
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        margin-bottom: 20px
+        b
+          font-size: 32px
+          display: block
+          margin-right: 20px
+        adress
+          display: flex
+          align-items: center
+          .icon
+            display: block
+            margin-right: 10px
+          span
+            display: block
+            font-size: 18px
+
+.career-banner
+  position: relative
+  .banner-img
+    width: 100%
+    object-fit: contain
+    margin: auto
+    display: block
+    margin-bottom: -200px
+    img
+      margin: auto
+      display: block
+      width: 100vw
+  .question
+    position: relative
+    z-index: 5
+  
+.career
+  .diff-wrap .item 
+    aspect-ratio: auto
+    b
+      margin-bottom: 0
+      margin-top: 15px
+
+@media (max-width: 992px)
+  .career-banner .banner-img
+    margin-bottom: -100px
+  .vacancy-menu
+    flex-wrap: nowrap
+    overflow: scroll
+    padding-bottom: 15px
+    min-width: calc(100% + 140px)
+    max-width: 100%
+    padding-right: 140px
+    .item
+      white-space: nowrap
+      margin-bottom: 0
+
+@media (max-width: 767px)
+  .vacancy-menu
+    padding-bottom: 15px
+    min-width: calc(100% + 130px)
+    max-width: 100%
+    padding-right: 130px
+    .item
+      white-space: nowrap
+      margin-bottom: 0
+      margin-right: 10px
+      height: 42px
+      padding: 0 20px
+      border-radius: 12px
+      font-size: 14px
+      font-weight: 500
+
+@media (max-width: 578px)
+  .vacancy-menu
+    padding-bottom: 15px
+    min-width: calc(100% + 15px)
+    max-width: 100%
+    padding-right: 15px
+    margin-bottom: 30px
+    .item
+      white-space: nowrap
+      margin-bottom: 0
+      margin-right: 10px
+      height: 42px
+      padding: 0 20px
+      border-radius: 12px
+      font-size: 14px
+      font-weight: 500
+
+@media (max-width: 767px)
+  .vacancy-wrap .item-title
+    display: block
+    b
+      font-size: 24px
+      margin-right: 0
+      margin-bottom: 20px
+    adress
+      span
+        font-size: 16px
+
+@media (max-width: 578px)
+  .career-banner .banner-img
+    margin-bottom: -40px
+  .vacancy-wrap .item
+    padding: 24px
+
+.checklist
+  &-pdf
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    margin-bottom: 60px
+    p
+      font-size: 18px
+      display: block
+      max-width: 600px
+      width: 100%
+    a
+      height: 64px
+      padding: 0 25px
+      border-radius: 16px
+      background:  rgba(255, 255, 255, 0.10)
+      backdrop-filter: blur(61px)
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-right: 30px
+      .icon
+        display: flex
+        align-items: center
+        margin-right: 12px
+        svg path
+          transition: .2s
+      span
+        color: #fff
+        font-size: 18px
+        font-weight: 400
+        transition: .2s
+        white-space: nowrap
+      &:hover
+        svg path
+          fill: #fff
+        background-color: $button_hover
+  .wrapper
+    display: block
+    margin-bottom: 40px
+    b
+      font-size: 32px
+      margin-bottom: 15px
+      display: block
+    .item
+      font-size: 18px
+      display: block
+      margin-bottom: 15px
+      padding-left: 35px
+      position: relative
+      transition: .2s
+      cursor: pointer
+      &:hover
+        color: $button_hover
+        transition: .2s
+      &::after
+        position: absolute
+        content: ''
+        height: 24px
+        width: 24px
+        background-color: rgba(#fff, .1)
+        border-radius: 6px
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        transition: .2s
+        background-repeat: no-repeat
+        background-size: contain
+      &.active
+        &::after
+          background-image: url(../img/icons/check.svg)
+          background-color: $main
+
+@media (max-width: 767px)
+  .checklist
+    &-pdf
+      display: block
+      p
+        width: 100%
+        font-size: 14px
+      a
+        margin-right: 0
+        margin-bottom: 15px
+        max-width: 200px
+    .wrapper
+      b
+        font-size: 20px
+    .item p 
+      font-size: 16px
+
+
+.faq
+  .subtitle
+    margin-bottom: 0
+  &-row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 60px
+    p
+      width: 100%
+      max-width: 700px
+    .button
+      width: 192px
+  &-costs
+    .wrapper  
+      display: block
+      margin-bottom: 70px
+      .title
+        margin-bottom: 40px
+      .item
+        display: block
+        background-color: rgba(#fff, .1)
+        border-radius: 16px
+        margin-bottom: 10px
+        .content
+          margin-top: -10px
+          display: none
+          padding: 0 30px 10px 30px
+        
+        .faq-toggle
+          font-size: 18px
+          font-weight: 500
+          position: relative
+          width: 100%
+          display: block
+          cursor: pointer
+          padding: 30px
+          padding-right: 50px
+          &::after
+            position: absolute
+            content: ''
+            height: 24px
+            width: 24px
+            background-repeat: no-repeat
+            background-size: contain
+            background-image: url(../img/icons/faq.svg)
+            right: 30px
+            top: 50%
+            transform: translateY(-50%)
+            transition: .2s  
+          &.active
+            &::after
+              background-image: url(../img/icons/faq-open.svg)
+
+@media (max-width: 992px)
+  .faq
+    &-row
+      display: block
+      margin-bottom: 40px
+      .subtitle
+        width: 100%
+        margin-bottom: 30px
+        font-size: 16px
+      .button
+        width: 320px
+        max-width: 100%
+    &-costs
+      .wrapper
+        margin-bottom: 30px
+        .item
+          .faq-toggle
+            font-size: 16px
+            padding: 16px 40px 16px 16px
+            &::after
+              right: 16px
+          .content
+            padding: 0 16px 1px 16px
+            margin-top: 0
+  .faq-costs .wrapper .title
+    font-size: 24px
+    margin-bottom: 15px
+
+@media (max-width: 578px)
+  .faq-row
+    .button
+      width: 100%
+      height: 50px
+      border-radius: 12px
+  
+.investor
+  .subtitle
+    max-width: 900px
+  &-img
+    display: block
+    margin-bottom: 80px
+    img
+      display: block
+      border-radius: 24px
+      object-fit: contain
+  &-form
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    .question
+      width: calc(100% - 450px - 50px)
+      &-wrap
+        display: block
+        background-color: transparent
+        padding: 0
+        textarea
+          height: 185px
+          max-height: 100%
+        .button
+          background-color: $main
+          &:hover
+            background-color: $button_hover
+        .left
+          width: 100%
+          p
+            width: 100%
+            margin: 0
+            margin-bottom: 20px
+            max-width: 100%
+          b
+            margin: 0
+            margin-bottom: 16px
+        .right
+          width: 100%
+  &-form-rows
+    display: block
+    width: 450px
+    .item
+      border-radius: 24px
+      background-color: rgba(#fff, .1)
+      backdrop-filter: blur(47px)
+      padding: 30px
+      margin-bottom: 20px
+      display: block
+      &:last-child
+        margin-bottom: 0
+      b
+        font-size: 22px
+        display: block
+        margin-bottom: 10px
+      p
+        font-size: 18px
+        display: block
+        margin-bottom: 10px
+      a
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        font-weight: 700
+        font-size: 20px
+        &:hover
+          color: $button_hover
+        .icon
+          display: block
+          margin-right: 10px
+
+
+@media (max-width: 1245px)
+  .investor-form
+    display: block
+    .question
+      width: 100%
+      margin-bottom: 30px
+    &-rows
+      width: 100%
+      display: flex
+      align-items: stretch
+      justify-content: space-between
+      .item
+        margin-bottom: 0
+        width: calc(50% - 15px)
+
+@media (max-width: 767px)
+  .investor
+    .subtitle
+      margin-bottom: 20px
+    &-img
+      margin-bottom: 35px
+  .investor-form
+    display: block
+    &-rows
+      width: 100%
+      display: block
+      .item
+        margin-bottom: 10px
+        width: 100%
+        padding: 25px
+        b
+          font-size: 18px
+          margin-bottom: 10px
+        p
+          font-size: 14px
+          margin-bottom: 12px
+        a
+          font-size: 16px
+
+  
+@media (max-width: 578px)
+  .investor
+    &-img
+      img
+        aspect-ratio: 320 / 210
+        object-fit: cover
+  .investor-form .question-wrap .left 
+    b
+      margin-bottom: 10px
+    p
+      margin-bottom: 20px
+
+
+.single
+  .content
+    margin-bottom: 70px
+    .get
+      margin-top: 70px
+      margin-bottom: 70px
+      p
+        margin-bottom: 0
+        color: #fff
+      .input
+        p
+          color: rgba(47, 43, 67, 0.50)
+      .button
+        background-color: $button
+        color: #fff
+        &:hover
+          background-color: $button_hover
+  &-nav
+    margin-bottom: 70px
+    display: block
+    a
+      display: block
+      font-size: 18px
+      margin-bottom: 16px
+      &:hover
+        color: $button_hover
+      &:last-child
+        margin-bottom: 0
+    b
+      font-size: 32px
+      display: block
+      margin-bottom: 15px
+  .thumb
+    display: block
+    margin-bottom: 60px
+    img
+      display: block
+      border-radius: 24px
+      width: 100%
+      object-fit: cover
+      aspect-ratio: 1216 / 610
+  .author
+    display: flex
+    align-items: center
+    margin-bottom: 40px
+    background-color: red
+    min-height: 60px
+    width: 100%
+  .subtitle
+    max-width: 100%
+  &-tags
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    justify-content: flex-start
+    margin-bottom: 25px
+    a
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 45px
+      border-radius: 12px
+      padding: 0 24px
+      color: #fff
+      border: 1px solid #fff
+      margin-right: 15px
+      margin-bottom: 15px
+      &:hover
+        background-color: $button_hover
+        border-color: $button_hover
+  .mini-banner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 40px
+    border-radius: 20px
+    background-color: rgba(#fff, .1)
+    margin-top: 70px
+    margin-bottom: 50px
+    .left
+      max-width: 600px
+      p
+        color: #fff
+        margin-bottom: 0
+        font-size: 18px
+      b
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        font-size: 30px
+        margin-bottom: 18px
+        .icon
+          display: block
+          margin-right: 18px
+          img
+            width: 40px
+            object-fit: contain
+            aspect-ratio: 1/1
+    .right
+      width: 420px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      a.button
+        width: 170px
+        margin-left: 40px
+        color: #fff
+      &-contacts
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        a
+          color: #fff
+          &:hover
+            color: $button_hover
+        .email
+          font-size: 18px
+          display: block
+          text-align: end
+        .phone
+          display: block
+          margin-bottom: 2px
+          font-weight: 700
+          font-size: 24px
+          text-align: end
+  .big-banner
+    padding: 60px 40px 
+    border-radius: 20px
+    background-color: rgba(#fff, .1)
+    margin-top: 70px
+    margin-bottom: 50px
+    background-repeat: no-repeat
+    background-size: cover
+    background-image: url(../img/big-banner-bg.svg)
+    background-position: right bottom
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    overflow: hidden
+    position: relative
+    .right
+      position: absolute
+      right: 80px
+      bottom: 0
+      img
+        display: block
+        width: 320px
+        object-fit: contain
+    .left
+      max-width: 600px
+      a.button
+        width: 170px
+        color: #fff
+      p
+        color: #fff
+        margin-bottom: 25px
+        font-size: 18px
+      b
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        font-size: 30px
+        margin-bottom: 18px
+        .icon
+          display: block
+          margin-right: 18px
+          img
+            width: 40px
+            object-fit: contain
+            aspect-ratio: 1/1
+  
+
+@media (max-width: 992px)
+  .single
+    &-tags
+      flex-wrap: nowrap
+      overflow-y: hidden
+      overflow-x: scroll
+      padding-bottom: 20px
+      padding-right: 135px
+      min-width: calc(100% + 135px)
+      a
+        margin-bottom: 0
+        margin-right: 15px
+        white-space: nowrap
+
+
+@media (max-width: 578px)
+  .single
+    &-tags
+      padding-bottom: 10px
+      margin-bottom: 20px
+      a
+        font-size: 14px
+        height: 40px
+        padding: 0 20px
+        border-radius: 12px
+        margin-right: 10px
+
+
+.single
+  .author
+    background-color: transparent
+    .icon
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-right: 10px
+      .svg
+        height: 24px
+        width: 24px
+    .views
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      background-color: rgba(#fff, .1)
+      padding: 0 15px
+      border-radius: 10px
+      margin-right: 15px
+      height: 40px
+      font-size: 18px
+      .time
+        font-size: 18px
+        font-weight: 400
+    .read-time
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      background-color: rgba(#fff, .1)
+      padding: 0 15px
+      border-radius: 10px
+      margin-right: 15px
+      height: 40px
+      .value
+        font-size: 18px
+        font-weight: 400
+    .top-rat
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      border-radius: 10px
+      background-color: rgba(#fff, .1)
+      padding: 0 15px
+      margin-right: 15px
+      height: 40px
+      .new-rating
+        padding-right: 10px
+      .votes
+        font-size: 18px
+        font-weight: 400
+    .name
+      display: block
+      margin-right: 20px
+      p
+        font-weight: 700
+        font-size: 18px
+        display: block
+        margin-bottom: 6px
+      span
+        display: block
+        font-size: 16px
+        font-weight: 400
+    .avatar
+      display: block
+      margin-right: 15px
+      img
+        display: block
+        width: 60px
+        border-radius: 100%
+        object-fit: cover
+        margin-right: 0
+        height: 60px
+    .new-rating
+      .wpd-rating-stars
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        min-height: 16px
+        min-width: 16px
+        svg
+          min-width: 16px
+          min-height: 16px
+          path.wpd-star.wpd-active
+            fill: #FFA621
+          path.wpd-star
+            fill: #FFFFFF26
+
+
+@media (max-width: 1245px)
+  .single .big-banner .right
+    right: -30px
+  .single .mini-banner
+    .right
+      width: 410px
+      padding-left: 30px
+  .content .wp-block-group__inner-container .wp-block-image
+    display: flex
+    align-items: center
+    justify-content: center
+
+@media (max-width: 992px)
+  .content .wp-block-group__inner-container
+    display: block
+  .content .wp-block-group__inner-container .wp-block-group
+    width: 100%
+  .content .wp-block-group__inner-container .wp-block-image
+    width: 100%
+  .single 
+    .content 
+      .get 
+        p
+          margin-bottom: 20px
+    .big-banner
+      .left
+        width: 440px
+      .right
+        img
+          width: 260px
+    .mini-banner
+      display: block
+      .left
+        width: 100%
+        margin-bottom: 30px 
+      .right
+        width: 100%
+        justify-content: flex-start
+        padding-left: 0
+        &-contacts
+          align-items: flex-start
+
+@media (max-width: 767px)
+  .single 
+    .get-form .input
+      &.listen
+        p
+          display: block
+      p
+        display: none
+    .author
+      flex-wrap: wrap
+      .avatar
+        width: 60px
+        margin-right: 15px
+        margin-bottom: 11px
+      .name
+        width: calc(100% - 60px - 15px)
+        margin-right: 0
+        margin-bottom: 20px
+  .single .big-banner .left p
+    max-width: 300px
+  
+
+@media (max-width: 578px)
+  .single-nav
+    margin-bottom: 40px
+    b
+      font-size: 24px
+      margin-bottom: 20px
+    a
+      font-size: 16px
+      margin-bottom: 12px
+  .single .mini-banner
+    padding: 20px
+    margin-bottom: 30px
+    margin-top: 30px
+    .right
+      display: block
+      a.button
+        margin: 0
+        height: 50px
+        width: 130px
+      .right-contacts
+        margin-bottom: 20px
+        margin-right: 0
+        width: 100%
+        .phone
+          font-size: 20px
+          margin-bottom: 2px
+        .email
+          font-size: 14px
+          margin: 0
+    .left
+      margin-bottom: 20px
+      p
+        font-size: 12px
+      b
+        font-size: 18px
+        margin-bottom: 10px
+        .icon
+          margin-right: 15px
+          img
+            width: 24px
+            height: 24px
+  .single .big-banner
+    padding: 20px
+    margin-top: 30px
+    margin-bottom: 30px
+    .right
+      right: 0
+      bottom: 0
+      img
+        width: 170px
+    .left
+      a.button
+        margin: 0
+        height: 50px
+        width: 130px
+      p
+        font-size: 12px
+        max-width: 200px
+      b
+        font-size: 18px
+        margin-bottom: 10px
+        .icon
+          margin-right: 15px
+          img
+            width: 24px
+            height: 24px
+  .single-tags a
+    font-size: 14px
+  .breadcrumbs
+    margin-bottom: 20px
+
+@media (max-width: 370px)
+  .single .big-banner .right
+    right: -40px
+
+
+  
+
+.blog-page
+  .single-tags
+    margin-bottom: 25px
+  .blog-wrap
+    justify-content: flex-start
+    display: flex
+    align-items: stretch
+    flex-wrap: wrap
+    &-item
+      width: calc(33.3% - 20px)
+      margin-right: 30px
+      margin-bottom: 30px
+      &:nth-child(3n + 3)
+        margin-right: 0
+  .search
+    margin-bottom: 40px
+    position: relative
+    z-index: 5
+    div.asl_m
+      z-index: 30!important
+    #ajaxsearchlite1 .probox, div.asl_w .probox
+      background-color: rgba(#fff, .05)
+      border-radius: 16px
+      box-shadow: none
+      border: none
+      align-items: center
+      display: flex
+      height: 60px
+    #ajaxsearchlite1 .probox .proinput, div.asl_w .probox .proinput
+      height: 60px
+      display: flex
+      align-items: center
+      form
+        height: 60px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+        input
+          font-size: 16px
+          &::placeholder
+            font-size: 16px
+    div.asl_w .probox .proclose
+      height: 24px
+      width: 24px
+      background-repeat: no-repeat
+      background-size: contain
+      background-image: url(../img/icons/close-search.svg)
+      margin-right: 10px
+      svg
+        display: none
+    div.asl_w .probox div.asl_simple-circle
+      border: 4px solid #fff
+    div.asl_w .probox .proloading
+      margin-right: 10px
+    #ajaxsearchlite1 .probox .proinput input, div.asl_w .probox .proinput input
+      color: rgba(#fff, .7)!important
+      &::placeholder
+        color: rgba(#fff, .7)!important
+    div.asl_w .probox .promagnifier
+      appearance: none
+      border: none
+      height: 24px
+      width: 24px
+      margin-right: 10px
+      background-repeat: no-repeat
+      background-size: contain
+      background-image: url(../img/icons/search-mob.svg)
+      box-shadow: none
+      .innericon
+        display: none!important
+
+
+@media (max-width: 992px)
+  .blog-page
+    .blog-wrap
+      justify-content: space-between 
+      &-item
+        width: calc(50% - 10px)
+        margin-bottom: 20px
+        margin-right: 0
+
+@media (max-width: 767px)
+  .blog-page
+    .search
+      margin-bottom: 20px
+      #ajaxsearchlite1 .probox, div.asl_w .probox
+        border-radius: 12px
+        height: 40px
+      #ajaxsearchlite1 .probox .proinput, div.asl_w .probox .proinput
+        height: 40px
+        form
+          height: 40px
+          input
+            font-size: 14px
+            &::placeholder
+              font-size: 14px
+    
+      
+
+@media (max-width: 578px)
+  .blog-page
+    .single-tags
+      margin-bottom: 15px
+    .blog-wrap
+      justify-content: space-between 
+      margin-bottom: 20px
+      &-item
+        width: 100%
+        margin-bottom: 10px
+
+  
+.blog-page-sub
+  background-color: $main
+  padding: 35px 50px
+  border-radius: 18px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 70px
+  .right
+    width: 410px
+    form
+      background-color: #fff
+      border-radius: 18px
+      padding: 5px
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      position: relative
+      .wpcf7-spinner
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 10px
+      input.button
+        width: 157px
+        min-width: 157px
+      .input
+        width: calc(100% - 160px)
+      
+  .left
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    width: auto
+    max-width: 600px
+    padding-right: 30px
+    img
+      display: block
+      margin-right: 20px
+      min-width: 80px
+    .text
+      display: block
+      b
+        font-size: 32px
+        display: block
+        margin-bottom: 6px
+      p
+        font-size: 18px
+        margin: 0
+
+
+@media (max-width: 1245px)
+  .blog-page-sub
+    padding: 30px
+    .left
+      width: calc(100% - 430px)
+    .right
+      width: 410px
+
+@media (max-width: 992px)
+  .blog-page-sub
+    padding: 25px
+    max-width: 400px
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    flex-direction: column
+    justify-content: flex-start
+    .left
+      width: 100%
+      flex-direction: column
+      justify-content: flex-start
+      margin-bottom: 20px
+      padding-right: 0
+      margin-right: 0
+      img
+        margin-right: 0
+        margin-bottom: 20px
+      .text
+        b
+          text-align: center
+          font-size: 30px
+          margin-bottom: 10px
+        p
+          display: block
+          text-align: center
+          font-size: 14px
+    .right
+      width: 100%
+      form
+        display: block
+        input.button
+          max-width: 100%
+          width: 100%
+        .input
+          width: 100%
+          margin-bottom: 0
+          input
+            width: 100%
+
+
+
+  
+
+div.asl_r .results .asl_nores,
+div.asl_r.vertical,
+div.asl_r .results .item
+  background-color: #252f36!important
+  border: none!important
+div.asl_r.asl_w.vertical .results .item
+  padding: 0
+  .asl_content
+    padding: 0
+    a
+      padding: 10px 20px 7px 20px
+      display: block
+  &::after
+    opacity: 0.1
+    position: absolute
+div.asl_r .results .item .asl_content h3, div.asl_r .results .item .asl_content h3 a
+  color: #fff
+  border: none
+  font-size: 14px
+  text-shadow: none
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  line-height: 1.3
+  &:hover
+    color: $button_hover
+    border: none
+    text-shadow: none
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 1.3
+.results .asl_nores .asl_keyword,
+div.asl_r *
+  color: #fff
+
+.download
+  &-cards
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: stretch
+    .card
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      justify-content: space-between
+      border-radius: 24px 
+      background-color: rgba(#fff, .1)
+      padding: 30px
+      width: calc(50% - 10px)
+      margin-bottom: 20px
+      a
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        margin-top: 10px
+        &:hover
+          .name, .format
+            color: $button_hover
+            transition: .2s
+        .icon
+          display: block
+          margin-right: 10px
+        .name
+          font-weight: 700
+          font-size: 18px
+          display: block
+          margin-right: 8px
+          transition: .2s
+        .format
+          color: rgba(#fff, .5)
+          font-size: 16px
+          display: block
+          transition: .2s
+      b
+        font-size: 24px
+        display: block
+        margin-bottom: 10px
+      p
+        font-size: 16px
+        display: block
+        margin-bottom: 30px
+
+@media (max-width: 767px)
+  .download-cards
+    display: block
+    .card
+      width: 100%
+      margin-bottom: 10px
+      padding: 24px
+      display: block
+      .links
+        a
+          margin-top: 10px
+      b
+        font-size: 18px
+        margin-bottom: 10px
+      p
+        font-size: 14px
+        margin-bottom: 20px
+
+.quote-page-form
+  position: relative
+  .wpcf7-list-item
+    margin-left: 0
+  .wpcf7-spinner
+    position: absolute
+    left: 0px
+    bottom: 18px
+  .checkboxes
+    display: block
+    margin-bottom: 40px
+  .wpcf7-checkbox
+    display: block
+    margin: 0
+    padding: 0
+    label
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      margin-bottom: 16px
+      position: relative
+      cursor: pointer
+      input
+        display: none
+        &:checked + span
+          &::after
+            background-color: $main
+            background-image: url(../img/icons/check.svg)
+      span
+        font-size: 18px
+        font-weight: 400
+        position: relative
+        padding-left: 34px
+        &::after
+          position: absolute
+          content: ''
+          height: 24px
+          width: 24px
+          border-radius: 6px
+          left: 0
+          top: 50%
+          background-color: rgba(#fff, .1)
+          transform: translateY(-50%)
+          background-repeat: no-repeat
+          background-size: contain
+    span
+      display: flex
+      align-items: center
+      justify-content: flex-start
+  .title
+    margin-bottom: 20px
+  .row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 40px
+    width: 100%
+    .half
+      width: calc(50% - 8px)
+    .third
+      width: calc(33.3% - (32px / 3))
+  .input
+    border-radius: 16px
+    position: relative
+    p
+      position: absolute
+      display: none
+      left: 20px
+      color: rgba(#fff, .5)
+      font-size: 12px
+      left: 15px
+      top: 10px
+    textarea
+      border-radius: 16px
+      height: 155px
+      resize: none
+      border: none
+      font-size: 16px
+      color: #fff
+      width: 100%
+      background-color: rgba(#fff, .05)
+      max-width: 100%
+      display: block
+      padding-top: 20px
+      &:placeholder
+        color: $text_dark
+        font-size: 18px
+    input
+      border-radius: 16px
+      height: 60px
+      border: none
+      font-size: 16px
+      color: #fff
+      display: block
+      width: 100%
+      max-width: 100%
+      background-color: rgba(#fff, .05)
+      &:placeholder
+        color: $text_dark
+        font-size: 18px
+    &.listen
+      input
+        padding-top: 30px
+      textarea
+        padding-top: 30px
+      p
+        display: block
+  .select
+    position: relative
+    select
+      width: 100%
+      max-width: 100%
+      border-radius: 16px
+      height: 60px
+      border: none
+      font-size: 16px
+      color: #fff
+      display: block
+      background-color: rgba(#fff, .05)
+      padding-left: 15px
+      padding-top: 22px
+      &:placeholder
+        color: $text_dark
+        font-size: 18px
+    p
+      position: absolute
+      left: 20px
+      color: rgba(#fff, .5)
+      font-size: 12px
+      left: 15px
+      top: 10px
+  .btn
+    position: absolute
+    top: 50%
+    right: 20px
+    transform: translateY(-50%)
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 24px
+    width: 24px
+    pointer-events: none
+  .date
+    position: relative
+    
+    input
+      width: 100%
+      max-width: 100%
+      border-radius: 16px
+      height: 60px
+      border: none
+      font-size: 16px
+      color: #fff
+      display: block
+      background-color: rgba(#fff, .05)
+      padding-left: 15px
+      padding-top: 22px
+      &::-webkit-calendar-picker-indicator
+        height: 60px
+        width: 120px
+        background: none
+      &:placeholder
+        color: $text_dark
+        font-size: 18px
+    p
+      position: absolute
+      left: 20px
+      color: rgba(#fff, .5)
+      font-size: 12px
+      left: 15px
+      top: 10px
+  .file
+    height: 125px
+    width: 100%
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-direction: column
+    padding: 20px
+    border-radius: 15px
+    border: 1px dashed rgba(#fff, .5)
+    margin-top: 40px
+    margin-bottom: 40px
+    cursor: pointer
+    transition: .2s
+    &:hover
+      transition: .2s
+      border: 1px solid $main
+    input
+      display: none
+    b
+      font-size: 18px
+      font-weight: 400
+      display: block
+      margin-bottom: 10px
+    p
+      font-size: 14px
+      color: rgba(#fff, .5)
+    .icon
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-bottom: 10px
+  .button.button-accent
+    max-width: 180px
+    width: 180px
+    min-width: 0
+
+@media (max-width: 992px)
+  .quote-page-form .title
+    font-size: 30px
+
+@media (max-width: 767px)
+  .quote-page-form 
+    .title
+      font-size: 20px
+      margin-bottom: 20px
+      line-height: 1.2
+    .row
+      margin-bottom: 30px
+      display: block
+    .input, .select, .date
+      margin-bottom: 15px
+      width: 100%!important
+  .quote-page-form .wpcf7-checkbox label span
+    font-size: 14px
+  .quote-page-form .checkboxes
+    margin-bottom: 20px
+  .quote-page-form .button.button-accent
+    max-width: 100%
+    width: 100%
+  .quote-page-form .file 
+    b
+      font-size: 16px
+    p
+      font-size: 14px
+
+
+.service-offer
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  align-items: stretch
+  .left
+    width: calc(100% - 620px - 30px)
+    h1
+      line-height: 1.1
+      margin-bottom: 30px
+    &>p
+      max-width: 480px
+  .right
+    width: 610px
+    img
+      display: block
+      width: 100%
+      height: 526px
+      object-fit: cover
+      border-radius: 24px
+  .get-form
+    margin-bottom: 60px
+  &-features
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: stretch
+    .item
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      margin-bottom: 20px
+      width: calc(50% - 15px)
+      .icon
+        display: block
+        margin-right: 15px
+        img
+          display: block
+          object-fit: contain
+          width: 30px
+      p
+        font-size: 18px
+  
+
+.choose
+  .subtitle
+    max-width: 100%
+  &-wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    align-items: stretch
+    .item
+      width: calc(33.3% - (40px / 3))
+      margin-right: 20px
+      margin-bottom: 20px
+      border-radius: 24px
+      background: rgba(255, 255, 255, 0.10)
+      backdrop-filter: blur(60px)
+      padding: 30px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+      min-height: 320px
+      &:nth-child(3n + 3)
+        margin-right: 0
+      .icon
+        display: block
+        margin-bottom: 20px
+        img
+          display: block
+          object-fit: contain
+          width: 40px
+      b
+        font-size: 18px
+        display: block
+        margin-bottom: 14px
+      p
+        font-size: 16px
+        display: block
+      
+      
+.add-services-wrap
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+  align-items: stretch
+  .item
+    display: block
+    width: calc(100% / 6 - (100px / 6))
+    margin-right: 20px
+    margin-bottom: 24px
+    border-radius: 24px
+    border: 1px solid #fff
+    padding: 24px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: space-between
+    transition: .2s
+    min-height: 180px
+    &:hover
+      transition: .2s
+      border-color: $button_hover
+      p
+        color: $button_hover
+        transition: .2s
+    p
+      font-size: 18px
+      font-weight: 500
+      display: block
+      transition: .2s
+    .icon
+      display: block
+      margin-bottom: 15px
+      img
+        width: 30px
+        display: block
+        object-fit: contain
+    &:nth-child(6n + 6)
+      margin-right: 0
+
+
+@media (max-width: 1245px)
+  .service-offer
+    .right
+      width: 450px
+      img
+        height: 460px
+    .left
+      width: calc(100% - 490px)
+      h1
+        font-size: 44px
+      &>p
+        font-size: 16px
+      .get-form
+        width: 100%
+  .add-services-wrap .item
+    margin-right: 12px
+    margin-bottom: 12px
+    width: calc(100% / 6 - 10px)
+    min-height: 150px
+    padding: 20px
+    p
+      font-size: 14px
+  
+
+@media (max-width: 992px)
+  .service-offer
+    flex-direction: column-reverse
+    .left
+      width: 100%
+      h1
+        font-size: 36px
+        margin-bottom: 15px
+      &>p
+        font-size: 16px
+        margin-bottom: 20px
+    .right
+      width: 100%
+      margin-bottom: 20px
+      img
+        aspect-ratio: 324 / 220
+        height: auto
+  .choose-wrap 
+    justify-content: space-between
+    .item
+      width: calc(50% - 5px)
+      margin-bottom: 10px
+      margin-right: 0
+  .add-services-wrap .item
+    width: calc(100% / 4 - 10px)
+    margin-right: 12px
+    margin-bottom: 12px
+    &:nth-child(6n + 6)
+      margin-right: 12px
+    &:nth-child(4n + 4)
+      margin-right: 0
+
+@media (max-width: 767px)
+  .choose-wrap 
+    .item
+      width: 100%
+      padding: 20px
+      min-height: 0
+      .icon
+        margin-bottom: 16px
+      b
+        font-size: 16px
+        margin-bottom: 6px
+      p
+        font-size: 14px
+  .add-services-wrap
+    flex-wrap: nowrap
+    overflow-x: auto
+    padding-bottom: 15px
+    min-width: calc(100% + 130px)
+    padding-right: 130px
+    .item
+      aspect-ratio: 1 / 1
+      min-width: 130px
+      margin-right: 10px!important
+      min-height: 0
+  
+@media (max-width: 578px)
+  .add-services-wrap
+    min-width: calc(100% + 30px)
+    position: relative
+    left: -15px
+    padding-right: 15px
+    padding-left: 15px
+  .service-offer
+    .btns
+      display: flex
+      justify-content: space-between
+      align-items: center
+      a
+        width: 100%!important
+        height: 50px
+        font-size: 14px
+        margin-right: 0
+        max-width: calc(50% - 5px)!important
+    &-features 
+      .item
+        width: 100%
+        margin-bottom: 15px
+        p
+          font-size: 15px
+        .icon
+          margin-right: 12px
+          img
+            width: 24px
+
+    .get-form 
+      display: block
+      padding: 0
+      padding-bottom: 10px
+      margin-bottom: 20px
+      .input
+        width: 100%
+        max-width: 100%
+        &:first-child
+          border-bottom: 1px solid rgba(47, 43, 67, 0.15)
+          border-radius: 16px 16px 0 0
+      .button
+        width: 100%
+        margin-right: 10px
+        margin-left: 10px
+        max-width: calc(100% - 20px)
+
+
+
+
+.services-tabs
+  display: block
+  margin-top: 50px
+  .tabs-title
+    border-radius: 12px
+    padding: 5px
+    background-color: rgba(#fff, .1)
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 40px
+    .item
+      width: 50%
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 12px
+      background-color: transparent
+      color: rgba(#fff, .5)
+      font-size: 500
+      font-size: 18px
+      transition: .2s
+      cursor: pointer
+      height: 55px
+      &.active
+        color: #fff
+        background-color: #FE7300
+        cursor: text
+  .tabs-wrapper
+    display: block
+    .wrap
+      display: none
+      justify-content: flex-start
+      align-items: stretch
+      flex-wrap: wrap
+      &.active
+        display: flex
+      .item
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        transition: .2s
+        border: 1px solid #fff
+        padding: 15px 24px
+        margin-bottom: 20px
+        width: calc(33.3% - (40px / 3))
+        margin-right: 20px
+        border-radius: 10px
+        &:nth-child(3n + 3)
+          margin-right: 0
+        &:hover
+          border-color: $button_hover
+          p
+            color: $button_hover
+        p
+          font-size: 18px
+          font-weight: 500
+          color: #fff
+          transition: .2s
+        .icon
+          display: block
+          margin-right: 15px
+          img
+            display: block
+            width: 30px
+            object-fit: contain
+
+.all-services
+  .subtitle
+    max-width: 100%
+
+.service-offer
+  .btns
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    margin-bottom: 30px
+    a
+      height: 60px
+      margin-right: 16px
+      max-width: 130px
+      &:last-child
+        background-color: rgba(#fff, .1)
+        color: #fff
+        max-width: 164px
+        &:hover
+          background-color: $button_hover
+          color: #fff
+
+
+  
+.hide-bc
+  .breadcrumbs
+    opacity: 0
+    pointer-events: none
+
+
+.benefits-wrap
+  display: flex
+  justify-content: space-between
+  align-items: stretch
+  .right
+    width: 600px
+    img
+      display: block
+      width: 100%
+      aspect-ratio: 600 / 500
+      object-fit: cover
+      border-radius: 24px
+  .left
+    width: calc(100% - 600px - 60px)
+    a.button
+      max-width: 170px
+    .title
+      margin-bottom: 30px
+    .content
+      display: block
+      margin-bottom: 30px
+      p,li,strong
+        color: #fff
+        font-size: 18px
+
+
+
+.land-offer
+  .offer
+    &-wrap
+      align-items: stretch
+      &-right
+        bottom: -5px
+        display: flex
+        align-items: flex-end
+        justify-content: flex-end
+      &-left
+        padding-top: 0
+        h1
+          font-size: 60px
+        .get-form
+          margin-bottom: 30px
+  .breadcrumbs
+    margin-top: 0
+
+.img-content
+  .wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 100px
+    &:last-child
+      margin-bottom: 0
+    &:nth-child(even)
+      flex-direction: row-reverse
+
+    .left
+      width: calc(100% - 700px - 60px)
+      .content
+        p,li,strong
+          color: #fff
+    .right
+      width: 700px
+      display: block
+      overflow: hidden
+      img
+        display: block
+        position: relative
+        width: 100%
+        object-fit: contain
+        border-radius: 24px
+
+
+  
+.bg-section.land-section-bg
+  background-image: url(../img/land-bg.png)
+  background-size: cover
+
+.four-steps
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    .item
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      flex-direction: column
+      border-radius: 24px
+      background-color: rgba(#fff, .1)
+      backdrop-filter: blur(60px)
+      width: calc(25% - (60px / 4))
+      min-height: 202px
+      padding: 30px
+      position: relative
+      z-index: 5
+      .num
+        color: #FE7300
+        font-weight: 700
+        font-size: 32px
+        display: block
+        margin-bottom: 15px
+      b
+        font-size: 18px
+        display: block
+      a.button
+        margin-top: 20px
+        font-size: 16px
+        height: 45px
+        width: 140px
+
+.about-us.land-video
+  padding: 0
+  margin-bottom: 100px
+  .about-us-video
+    margin: 0
+    padding: 0
+    display: block
+    height: max-content
+    aspect-ratio: 1440 / 675
+    &::before
+      aspect-ratio: 1440 / 675
+      border-radius: 0
+      height: auto
+      width: 100%
+    img,iframe
+      border-radius: 0
+      aspect-ratio: 1440 / 675
+      object-fit: cover
+      height: auto
+
+
+@media (max-width: 1245px)
+  .img-content .wrap 
+    .left
+      width: calc(100% - 540px)
+    .right
+      width: 500px
+
+@media (max-width: 992px)
+  .land-offer 
+    position: relative
+    .offer-wrap
+      &-right
+        position: static
+      &-left
+        h1, p
+          text-align: center
+    .breadcrumbs
+      position: absolute
+      top: 45px
+      left: 0
+      margin-bottom: 0
+  .img-content .wrap
+    display: block
+    margin-bottom: 25px
+    .left
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-start
+      &>img
+        order: 1
+        display: block
+        border-radius: 24px
+        object-fit: cover
+        aspect-ratio: 324 / 220
+        width: 100%
+        margin-bottom: 15px
+      h2
+        order: -1
+      .content
+        order: 3
+    .right
+      width: 100%
+      display: none
+  .four-steps-wrap
+    flex-wrap: nowrap
+    min-width: calc(100% + 140px)
+    padding-right: 140px
+    overflow-y: auto
+    padding-bottom: 15px
+    .item
+      aspect-ratio: 1 / 1
+      min-width: 250px
+      margin-right: 10px
+  
+
+@media (max-width: 767px)
+  .land-offer
+    margin-bottom: 10px
+  .land-offer
+    .offer-wrap
+      margin-top: 0
+      &-right
+        padding-top: 20px
+        margin-bottom: -40px
+  .land-offer .breadcrumbs
+    top: 0px
+  .about-us.land-video
+    margin-bottom: 40px
+  .land-offer .offer-wrap-left h1
+    font-size: 42px
+  
+
+@media (max-width: 578px)
+  .destination.row-dest
+    .destination-wrap 
+      ul
+        width: 100%
+        margin-bottom: 0px
+        &:nth-child(2)
+          li
+            &:nth-child(1)
+              opacity: .5
+            &:nth-child(2)
+              opacity: .3
+            &:nth-child(3)
+              opacity: .2
+        li
+          &:nth-child(2)
+            opacity: .8
+          &:nth-child(3)
+            opacity: .7
+          &:nth-child(4)
+            opacity: .6
+          &:nth-child(5)
+            opacity: .5
+          &:nth-child(6)
+            opacity: .4
+          &:nth-child(7)
+            opacity: .3
+  .land-offer
+    .offer-wrap
+      margin-top: 0
+      &-right
+        padding-top: 20px
+        margin-bottom: -40px
+  .land-offer .breadcrumbs
+    top: 0px
+  .about-us.land-video
+    margin-bottom: 40px
+  .land-offer .offer-wrap-left 
+    h1
+      font-size: 36px
+      margin-bottom: 15px
+    p
+      font-size: 16px
+      margin-bottom: 20px
+  .bg-section.land-section-bg
+    background-image: url(../img/land-bg.png)
+    background-size: 600px
+  .four-steps
+    .title
+      margin-bottom: -10px
+  .about-us.land-video .about-us-video
+    aspect-ratio: 360 / 250
+    &:before
+      aspect-ratio: 360 / 250
+    img,iframe
+      aspect-ratio: 360 / 250
+  .four-steps-wrap
+    min-width: calc(100% + 30px)
+    position: relative
+    left: -15px
+    padding-left: 15px
+    padding-right: 15px
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+@import "./assets/_comments" 
+@import "./assets/_popup"
+  

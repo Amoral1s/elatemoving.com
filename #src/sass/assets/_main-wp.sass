@@ -1,0 +1,458 @@
+@import "./reset/_vars"
+
+.button
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: .2s
+  background-color: $button
+  color: #fff
+  font-size: 16px
+  font-weight: 500
+  cursor: pointer
+  width: 100%
+  line-height: 1
+  max-width: 240px
+  height: 60px
+  border-radius: 16px
+  &:hover
+    transition: .2s
+    background-color: $button_hover
+  &.button-accent
+    background-color: $main
+    &:hover
+      background-color: $button_hover
+      
+.title
+  font-weight: 700
+  color: #fff
+  display: block
+  font-size: 42px
+  text-align: left
+  line-height: 1
+  font-family: $font
+  margin-bottom: 40px
+  &.title-sub
+    margin-bottom: 24px
+  &.title-reverse
+    font-size: 140px
+    font-weight: 700
+    position: relative
+    margin-bottom: -35px
+    width: 100%
+    text-align: center
+    display: block
+    z-index: 1
+  span
+    color: $accent
+
+.subtitle
+  font-size: 18px
+  line-height: 1.5
+  display: block
+  color: #fff
+  margin-bottom: 40px
+  max-width: 700px
+
+.content
+  .wp-block-quote
+    p
+      display: block
+      border-radius: 20px
+      margin-bottom: 40px
+      margin-top: 40px
+      color: #fff
+      padding: 30px
+      position: relative
+      padding-left: 80px
+      background-color: rgba(#fff, .1)
+      &::after
+        position: absolute
+        content: ''
+        height: 32px
+        width: 32px
+        left: 30px
+        transform: translateY(-50%)
+        top: 50%
+        background-repeat: no-repeat
+        background-size: contain
+        background-image: url(../img/icons/q.svg)
+  .wp-block-group
+    padding-top: 40px
+    .wp-block-group
+      padding-top: 0
+  .wp-block-group__inner-container
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    flex-wrap: wrap
+    .wp-block-image
+      width: calc(40% - 10px)
+      margin-bottom: 0px
+    .wp-block-group
+      width: calc(60% - 10px)
+    h1,h2,h3,h4,h5,h6
+      margin-top: 0
+      width: 100%
+    p
+      width: 100%
+  .wp-block-image
+    display: block
+    margin-bottom: 40px
+    .wp-element-caption
+      width: 100%
+      text-align: end
+      font-size: 16px
+      color: $text
+    img
+      width: 100%
+      object-fit: contain
+      border-radius: 15px
+      display: block
+  iframe
+    width: 100%
+    height: auto
+    object-fit: contain
+    aspect-ratio: 16 / 9
+    border-radius: 15px
+  .wp-block-table
+    margin-bottom: 40px
+    margin-top: 40px
+    table
+      tbody
+        tr
+          &:nth-child(odd)
+            background-color: rgba(#fff, .05)
+            border-radius: 12px
+          td
+            color: #fff
+            font-weight: 400
+            text-align: left
+            border: none
+            padding: 20px
+            &:first-child
+              border-radius: 12px 0 0 12px
+            &:last-child
+              border-radius: 0 12px 12px 0
+      thead
+        border: none
+        tr
+          th
+            color: $text
+            font-weight: 700
+            text-align: left
+            border: none
+            padding: 20px
+  h2,h3,h4,h5,h6, h1
+    display: block
+    margin-bottom: 20px
+    margin-top: 40px
+  h1
+    font-size: 64px
+  h2
+    font-size: 38px
+  h3
+    font-size: 32px
+  h4
+    font-size: 26px
+  h5
+    font-size: 24px
+  h6
+    font-size: 22px
+  a
+    font-size: 18px
+    color: $main
+    &:hover
+      color: rgba($main, .3)
+  p
+    color: rgba(#fff, .7)
+    font-weight: 400
+    line-height: 1.5
+    display: block
+    margin-bottom: 20px 
+    font-size: 18px
+    a
+      font-size: 18px
+      color: $main
+      &:hover
+        color: rgba($main, .3)
+    strong
+      color: #fff
+  ul
+    display: block
+    margin-bottom: 20px
+    li
+      margin-bottom: 15px
+      position: relative
+      padding-left: 34px
+      font-size: 18px
+      color: rgba(#fff, .7)
+      strong
+        color: #fff
+      &::after
+        position: absolute
+        content: ''
+        height: 24px
+        width: 24px
+        background-repeat: no-repeat
+        background-size: contain
+        background-image: url(../img/icons/li.svg)
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        
+  ol
+    display: block
+    margin-bottom: 20px
+    li
+      margin-bottom: 15px
+      position: relative
+      font-size: 18px
+      color: rgba(#fff, .7)
+      strong
+        color: #fff
+
+.hidden
+  display: none!important
+
+.wp-pagenavi
+  display: flex
+  margin-top: 60px
+  justify-content: center
+  align-items: center
+  span.current
+    color: #fff
+    border-radius: 100%
+    border: none
+    min-width: 60px
+    font-size: 20px
+    height: 60px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 5px 
+    background-color: rgba(#fff, .05)
+  a
+    color: rgba(#fff, .5)
+    border: none
+    width: 60px
+    font-size: 20px
+    height: 60px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 5px
+    transition: .2s
+    border-radius: 100%
+    &:hover
+      transition: .2s
+      color: #fff
+      background-color: rgba(#fff, .05)
+      
+  .pages
+    display: none
+
+@media (max-width: 578px)
+  .wp-pagenavi
+    margin-top: 0
+    margin-bottom: 50px
+    span.current
+      height: 40px
+      width: 40px
+      min-width: 40px
+      font-size: 14px
+    a
+      width: 40px
+      min-width: 40px
+      max-width: 40px
+      height: 40px
+      font-size: 14px
+
+
+.not-found
+  padding-bottom: 200px
+  padding-top: 260px
+  .button
+    margin: auto
+  h1
+    color: $accent
+    font-size: 100px
+    display: block
+    margin-bottom: 40px
+
+
+@media (max-width: 767px)
+  .content
+    .wp-block-image
+      width: 100%
+      display: block
+      margin-bottom: 30px
+      .wp-element-caption
+        width: 100%
+        text-align: end
+        font-size: 16px
+        color: $text
+      img
+        width: 100%
+        object-fit: contain
+        border-radius: 15px
+        display: block
+    iframe
+      width: 100%
+      height: auto
+      object-fit: contain
+      aspect-ratio: 16 / 9
+      border-radius: 10px
+    .wp-block-table
+      margin-bottom: 20px
+      margin-top: 20px
+      table
+        tbody
+          tr
+            td
+              color: #fff
+              font-weight: 400
+              text-align: left
+              border: none
+              padding: 10px 0
+        thead
+          tr
+            th
+              color: $text
+              font-weight: 400
+              text-align: left
+              border: none
+              padding: 20px 0
+    h2,h3,h4,h5,h6, h1
+      display: block
+      margin-bottom: 20px
+      margin-top: 10px
+    h1 
+      font-size: 36px
+    h2
+      font-size: 34px
+    a
+      font-size: 14px
+    h3
+      font-size: 30px
+    h4
+      font-size: 24px
+    h5
+      font-size: 22px
+    h6
+      font-size: 20px
+    p
+      color: rgba(#fff, .7)
+      font-weight: 400
+      line-height: 1.5
+      display: block
+      margin-bottom: 15px 
+      font-size: 14px
+      strong
+        color: #fff
+    ul
+      display: block
+      margin-bottom: 20px
+      li
+        margin-bottom: 10px
+        position: relative
+        padding-left: 15px
+        font-size: 14px
+        color: rgba(#fff, .7)
+        strong
+          color: #fff
+        &::after
+          position: absolute
+          content: ''
+          height: 6px
+          width: 6px
+          border-radius: 100%
+          left: 0
+          top: 50%
+          transform: translateY(-50%)
+          background-color: $accent
+    ol
+      display: block
+      margin-bottom: 20px
+      li
+        margin-bottom: 15px
+        position: relative
+        font-size: 14px
+        color: rgba(#fff, .7)
+        strong
+          color: #fff
+  
+.breadcrumbs
+  display: block
+  margin-bottom: 50px
+  a, span
+    font-size: 16px
+    font-weight: 400
+    color: rgba(#fff, .5)
+    transition: .2s
+  a
+    &:hover
+      color: $main
+      transition: .2s
+
+
+@media (max-width: 578px)
+  .content
+    h1,h2,h3,h4,h5,h6
+      margin-top: 20px
+      margin-bottom: 15px
+    h2
+      font-size: 32px
+    h3
+      font-size: 27px
+    h4
+      font-size: 22px
+    h5
+      font-size: 18px
+    h1
+      font-size: 34px
+    p, li
+      font-size: 16px
+    tr,td
+      font-size: 16px
+  .content .wp-block-quote p
+    padding: 20px
+    display: block
+    padding-top: 60px
+    font-size: 16px
+    &::after
+      left: 20px
+      top: 30px
+  .content .wp-block-group
+    padding-top: 0
+  .content .wp-block-table
+    min-width: calc(100% + 15px)
+    table
+      min-width: 600px
+      max-width: 100%
+      overflow-x: scroll
+      padding-bottom: 20px
+  .content .wp-block-table table tbody tr td
+    padding: 10px
+    font-size: 14px
+  .content .wp-block-table table thead tr th
+    padding: 10px
+    font-size: 16px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

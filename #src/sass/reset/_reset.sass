@@ -1,0 +1,147 @@
+@import './_vars'
+@import './_fonts'
+	
+*
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+
+body, html
+	margin: 0
+	padding: 0
+	width: auto
+	color: $text
+	font-family: $font
+	font-weight: 400
+	font-size: 16px
+	background-color: $bg
+	line-height: 1.2
+	overflow-x: hidden
+	-ms-overflow-style: scrollbar
+	&::-webkit-scrollbar //скроллбар
+		width: 10px 
+		background-color: $bg
+	&::-webkit-scrollbar-thumb //ползунок
+		background-color: $main
+		border-radius: 4px
+	&::-webkit-scrollbar-thumb:hover 
+		background-color: #000
+	&::-webkit-scrollbar-button:vertical:start:decrement
+		background: linear-gradient(120deg, $bg 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(240deg, $dark 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(0deg, $bg 30%, rgba(0, 0, 0, 0) 31%)
+		background-color: $bg
+	&::-webkit-scrollbar-button:vertical:end:increment
+		background: linear-gradient(300deg, $bg 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(60deg, $bg 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(180deg, $bg 30%, rgba(0, 0, 0, 0) 31%)
+		background-color: $bg
+
+a, a:hover, a:active, a:link, a:focus
+	text-decoration: none
+	outline: none
+	color: $text
+	transition: .2s
+	cursor: pointer
+	&:hover
+		transition: .2s
+	
+p
+	line-height: 1.5
+	display: block
+
+img
+	max-width: 100%
+
+ul
+	list-style: none
+
+ol
+	list-style: decimal
+	padding-left: 20px
+
+div, span, article, nav, section, main, header
+	padding: 0
+	margin: 0
+
+input, button, select, textarea
+	border: 0
+	box-shadow: none
+	color: #000000
+	border: 1px solid rgba(0, 0, 0, 0.1)
+	appearance: none
+	-webkit-appearance: none
+	-moz-appearance: none
+	font-family: $font
+	&:placeholder
+		font-family: $font
+
+textarea
+	resize: none
+	max-width: 440px
+	width: 100%
+	border: 1px solid rgba(0, 0, 0, 0.1)
+	max-height: 160px
+	padding: 10px 15px
+	-moz-appearance: none
+	-webkit-appearance: none
+	appearance: none
+
+input[type="text"],input[type="tel"],input[type="submit"], button, input[type="password"], input[type="email"]
+	-webkit-appearance: none
+	appearance: none
+	padding: 10px 15px
+	width: 100%
+	max-width: 440px
+
+input[type="submit"], button
+	cursor: pointer
+
+input[type="number"]
+	padding: 10px 15px
+	width: 100%
+	max-width: 440px
+	-moz-appearance: textfield
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button
+		-webkit-appearance: none
+		appearance: none
+		-moz-appearance: textfield
+		visibility: hidden
+		position: absolute 
+		margin: 0
+	
+input:focus, textarea:focus, select:focus, button:focus, select:focus
+	outline: none
+
+h1, h2, h3, h4, h5
+	font-weight: 700
+	display: block
+
+.container 
+	width: 100%
+	max-width: 1215px
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
+
+@media (max-width: 1245px) 
+	.container 
+		max-width: 960px
+@media (max-width: 992px) 
+	.container 
+		max-width: 740px
+@media (max-width: 767px) 
+	.container 
+		max-width: 540px
+@media (max-width: 576px) 
+	.container 
+		max-width: 100%
+
+section
+	margin-bottom: 100px
+
+.disabled
+	pointer-events: none
+	opacity: 0.5
+
+.hidden
+	display: none
+

@@ -1,0 +1,302 @@
+
+
+.wpcf7-response-output
+  display: none!important
+
+.overlay
+  position: fixed
+  z-index: 100
+  top: 0
+  width: 100%
+  left: 0
+  right: 0
+  bottom: 0
+  height: 100%
+  background: var(--white-5, rgba(255, 255, 255, 0.05))
+  backdrop-filter: blur(250px)
+  display: none
+
+.popup
+  width: 435px
+  max-width: 95vw
+  max-height: 95vh
+  background-color: $bg
+  padding: 30px
+  border-radius: 25px
+  z-index: 150
+  display: none
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  color: #fff
+  transition: 0
+  &-thx
+    opacity: .3
+    transform: translate(-50%, -350%)
+    transition: .8s
+  small
+    color: #9A9A9A
+    font-size: 14px
+    max-width: 240px
+    display: block
+    line-height: 17px
+    a
+      color: #9A9A9A
+      font-size: 14px
+      line-height: 17px
+      text-decoration: underline
+      &:hover
+        color: $accent
+  .close
+    position: absolute
+    cursor: pointer
+    transition: .2s
+    top: 30px
+    right: 30px
+    z-index: 10
+    height: 24px
+    width: 24px
+    background-repeat: no-repeat
+    background-size: contain
+    svg
+      transition: .2s
+      path
+        transition: .2s
+    &:hover
+      transition: .2s
+      svg
+        transition: .2s
+        path
+          fill: $main
+          transition: .2s
+  .form-radio .wpcf7-form-control
+    background-color: #F9F9FA
+    border-radius: 15px
+    width: max-content
+    padding: 5px
+    display: block
+    margin-bottom: 20px
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    .wpcf7-list-item
+      margin: 0
+      &:first-child
+        margin-right: 5px
+      span
+        font-size: 18px
+        line-height: 22px
+        color: #9A9A9A
+        display: block
+        padding: 10px 30px
+        border-radius: 10px
+        cursor: pointer
+        transition: .2s
+        &:hover
+          background-color: #fff
+          color: $dark
+          transition: .2s
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05)
+      input
+        display: none
+        &:checked + span
+          background-color: #fff
+          color: $dark
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05)
+  &.popup-video
+    width: 920px
+    max-width: 95vw
+    .close
+      top: 5px
+      right: 5px
+    iframe
+      border-radius: 20px
+      max-width: 100%
+ 
+
+.popup.popup-search
+  background: transparent
+  width: 100%
+  max-width: 1245px
+  height: 100vh
+  max-height: 100%
+  align-items: center
+  justify-content: center
+  .search
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+    width: 100%
+  .close
+    width: auto
+    height: auto
+    display: block
+    &:hover
+      svg
+        path
+          fill: $bg
+  #ajaxsearchlite1 .probox, div.asl_w .probox
+    height: 80px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    border: none
+    .promagnifier
+      margin-right: 20px
+    .proinput
+      display: flex
+      align-items: center
+      form
+        input
+          font-size: 18px
+          &::placeholder
+            font-size: 18px
+div.asl_r.vertical
+  border-radius: 16px!important
+
+@media (max-width: 992px)
+  .popup.popup-search .search
+    align-items: flex-start
+    padding-top: 90px
+    .close
+      svg
+        height: 30px
+        width: 30px
+
+
+
+#ajaxsearchlite2 form
+  width: 100%
+
+.popup.review
+  width: 100%
+  max-width: 700px
+  padding: 40px
+  border-radius: 24px 
+  background-color: #313B41
+  backdrop-filter: blur(60px)
+  .wpcf7-spinner
+    position: absolute
+    bottom: 58px
+    right: 127px
+    margin: 0
+  b
+    font-size: 42px
+    display: block
+    margin-bottom: 15px 
+  &>p
+    font-size: 18px
+    display: block
+    margin-bottom: 20px
+  form
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+  .input
+    &.full
+      margin-bottom: 15px
+      width: 100%
+    &.half
+      width: calc(50% - 60px - 10px)
+  input.button
+    width: 120px
+
+  .form-stars
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    margin-bottom: 20px
+    img
+      display: block
+      cursor: pointer
+      transition: .2s
+      opacity: .3
+      margin-right: 6px
+      &:first-child
+        opacity: 1
+      &.active
+        opacity: 1
+      
+@media (max-width: 767px)
+  .popup.review
+    max-width: 540px
+
+@media (max-width: 578px)
+  .popup.review
+    max-width: calc(100vw - 30px)
+    padding: 20px
+    .close
+      right: 15px
+      top: 15px
+    b
+      font-size: 24px
+      margin-bottom: 0px
+    p
+      font-size: 16px
+      margin-bottom: 10px
+    .input.half
+      width: 100%
+      margin-bottom: 15px
+    input.button
+      max-width: 100%
+      width: 100%
+  .popup.review .wpcf7-spinner
+    bottom: 42px
+    right: 73px
+
+
+
+.thx
+  z-index: 5000
+  background-color: $bg
+  border-radius: 25px
+  padding: 30px
+  flex-direction: column
+  align-items: center
+  box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.1)
+  width: 414px
+  max-width: 414px
+  .icon
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    margin-bottom: 20px
+  img
+    margin: auto
+    margin-bottom: 20px
+    display: block 
+  b
+    display: block
+    font-size: 42px
+    margin-bottom: 15px
+    text-align: center
+  p
+    color: $text
+    display: block
+    font-size: 18px
+    margin-bottom: 0px
+    text-align: center
+
+@media (max-width: 578px)
+  .thx
+    width: 414px
+    max-width: calc(100vw - 30px)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
