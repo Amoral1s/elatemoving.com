@@ -30,7 +30,7 @@ get_header();
           </div>
         </div>
         <div class="offer-wrap-right">
-          <img src="<?php the_field('offer_img'); ?>" alt="<?php the_field('offer_title'); ?>">
+        <img src="<?php the_field('offer_img'); ?>" style="min-height: 280px" alt="<?php the_field('offer_title'); ?>">
         </div>
         <div class="advantages-wrap-cards">
           <?php if(have_rows('advantages_cards', 'options')) : while(have_rows('advantages_cards', 'options')) : the_row(); ?>
@@ -49,7 +49,7 @@ get_header();
   <section class="img-content">
     <div class="container">
       <?php if(have_rows('img_content')) : while(have_rows('img_content')) : the_row(); ?>
-      <div class="wrap">
+      <div class="wrap wow animate__animated animate__fadeInUp">
         <div class="left">
           <h2 class="title"><?php the_sub_field('title'); ?></h2>
           <div class="content">
@@ -67,7 +67,7 @@ get_header();
 </div>
 
 
-<section class="four-steps">
+<section class="four-steps wow animate__animated animate__fadeInUp">
   <div class="container">
     <h2 class="title title-reverse">
       <?php the_field('step_title'); ?>

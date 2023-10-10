@@ -17,6 +17,8 @@
     justify-content: space-between
     align-items: center
   &-logo
+    display: block
+    margin-left: 0
     img
       object-fit: contain
       width: 100%
@@ -60,7 +62,7 @@
             transition: .2s
       li
         padding: 0 15px
-      ul.sub-menu
+      ul.menu_sublist
         display: none
         position: absolute
         top: 100%
@@ -339,7 +341,7 @@
           border-top: 1px solid rgba(#fff, .1)
           border-top: 1px solid rgba(#fff, .1)
         &.menu-item-has-children
-          ul.sub-menu
+          ul.menu_sublist
             display: none
             margin-bottom: 5px
             li
@@ -435,6 +437,17 @@
     margin-bottom: 40px
 
 @media (max-width: 578px)
+  .header
+    width: 100%
+    .container
+      width: 100%
+    &-logo
+      margin-left: 0
+      img
+        margin-left: 0
+        width: 107px
+        margin-right: auto
+        object-fit: contain
   .page-top
     padding-top: 70px
   .offer

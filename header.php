@@ -20,7 +20,7 @@
 
 <body id="top">
 
-<header class="header"> 
+<header itemscope itemtype="http://schema.org/WPHeader" class="header"> 
   <div class="container"> 
     <div class="header-wrap"> 
       <?php if (is_home()) : ?>
@@ -32,14 +32,17 @@
         <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="elatemoving.com">
       </a>
       <?php endif; ?> 
-      <nav class="header-menu" style="display: none"> 
+      <nav class="header-menu" itemscope itemtype="http://schema.org/SiteNavigationElement" style="display: none"> 
+        <ul itemprop="about" itemscope itemtype="http://schema.org/ItemList">
         <?php  
           wp_nav_menu( array(
             'menu_class' => '',
             'theme_location' => 'menu-1',
-            'container' => null
+            'container' => null,
+            'walker'=> new True_Walker_Nav_Menu() // этот параметр нужно добавить
           )); 
         ?>
+        </ul>
       </nav> 
       <div class="header-right" style="display: none"> 
         <div class="header-contacts"> 
@@ -95,14 +98,17 @@
       <div class="search">
         <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
       </div>
-      <nav>
-        <?php  
-          wp_nav_menu( array(
-            'menu_class' => '',
-            'theme_location' => 'menu-1',
-            'container' => null
-          )); 
-        ?>
+      <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <ul itemprop="about" itemscope itemtype="http://schema.org/ItemList">
+          <?php  
+            wp_nav_menu( array(
+              'menu_class' => '',
+              'theme_location' => 'menu-1',
+              'container' => null,
+              'walker'=> new True_Walker_Nav_Menu() // этот параметр нужно добавить
+            )); 
+          ?>
+        </ul>
       </nav>
       <a class="phone" href="tel:<?php the_field('phone', 'options'); ?>">
         <?php the_field('phone', 'options'); ?>          

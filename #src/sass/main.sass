@@ -3303,10 +3303,15 @@ div.asl_r *
       transition: .2s
       cursor: pointer
       height: 55px
+      transition: .2s
+      &:hover
+        color: $button_hover
       &.active
         color: #fff
-        background-color: #FE7300
+        background-color: $button_hover
         cursor: text
+        &:hover
+          color: #fff
   .tabs-wrapper
     display: block
     .wrap
@@ -3451,7 +3456,7 @@ div.asl_r *
 
   
 .bg-section.land-section-bg
-  background-image: url(../img/land-bg.png)
+  background-image: url(../img/land-bg.svg)
   background-size: cover
 
 .four-steps
@@ -3588,14 +3593,16 @@ div.asl_r *
       ul
         width: 100%
         margin-bottom: 0px
+    .destination-wrap.show-more
+      ul
         &:nth-child(2)
           li
             &:nth-child(1)
               opacity: .5
             &:nth-child(2)
               opacity: .3
-            &:nth-child(3)
-              opacity: .2
+            &:nth-child(3) 
+              opacity: .2 
         li
           &:nth-child(2)
             opacity: .8
@@ -3627,7 +3634,7 @@ div.asl_r *
       font-size: 16px
       margin-bottom: 20px
   .bg-section.land-section-bg
-    background-image: url(../img/land-bg.png)
+    background-image: url(../img/land-bg.svg)
     background-size: 600px
   .four-steps
     .title
@@ -3645,27 +3652,168 @@ div.asl_r *
     padding-left: 15px
     padding-right: 15px
 
+.advantages-wrap-cards.commercial
+  .item
+    height: auto
+    .icon
+      margin-bottom: 60px
+    p
+      font-size: 16px
+      display: block
+    b
+      display: block
+      margin-bottom: 15px  
+
+@media (max-width: 1245px)
+  .advantages-wrap-cards.commercial
+    flex-wrap: wrap
+    justify-content: space-between
+    .item
+      width: calc(50% - 10px)
+      margin-bottom: 20px
+
+@media (max-width: 767px)
+  .advantages-wrap-cards.commercial
+    .item
+      width: 100%
+      margin-bottom: 10px
+      padding: 20px
+      aspect-ratio: auto
+      b
+        font-size: 16px
+        margin-bottom: 6px
+      p
+        font-size: 12px
+      .icon
+        margin-bottom: 15px
+
+@media (max-width: 578px)
+  .advantages-wrap-cards.commercial
+    .item
+      aspect-ratio: auto
+    
+
+.add-services-wrap.we-do
+  .item
+    width: calc(20% - (80px / 5))
+    margin-right: calc(80px / 4)
+    min-height: 210px
+    &:hover
+      border-color: #fff
+      p
+        color: #fff
+    &:nth-child(5n + 5)
+      margin-right: 0
 
 
+@media (max-width: 1245px)
+  .add-services-wrap.we-do
+    .item
+      min-height: 170px
+
+@media (max-width: 992px)
+  .add-services-wrap.we-do
+    flex-wrap: nowrap
+    overflow-x: auto
+    padding-right: 140px
+    min-width: calc(100% + 140px)
+    position: relative
+    .item
+      min-height: 170px
+      min-width: 160px
+      margin-right: 10px
+
+@media (max-width: 578px)
+  .add-services-wrap.we-do
+    flex-wrap: nowrap
+    overflow-x: auto
+    padding-right: 15px
+    min-width: calc(100% + 30px)
+    position: relative
+    left: -15px
+    padding-left: 15px
+    padding-bottom: 15px
+    .item
+      min-height: 170px
+      min-width: 160px
+      margin-right: 10px
+      margin-bottom: 0
 
   
 
+@media (max-width: 992px)
+  .services-tabs .tabs-wrapper .wrap 
+    justify-content: space-between
+    .item
+      width: calc(50% - 5px)
+      margin-bottom: 10px
+      margin-right: 0
+  .footer-menu
+    ul
+      display: none
 
 
 
+@media (max-width: 767px)
+  .add-services.page-add-services
+    .add-services-wrap
+      min-width: 0
+      padding-right: 0
+      flex-wrap: wrap
+      justify-content: space-between
+      .item
+        width: calc(50% - 5px)
+        margin-bottom: 10px
+        margin-right: 0!important
+        flex-direction: row
+        justify-content: flex-start
+        align-items: center
+        min-height: 0
+        aspect-ratio: auto
+        padding: 15px 24px
+        border-radius: 10px
+        p
+          margin: 0
+          font-size: 18px
+        .icon
+          margin: 0
+          margin-right: 15px
 
 
+@media (max-width: 578px)
+  .content .addtoany_content .addtoany_list
+    justify-content: center
+    a
+      margin: 0 5px
+  .services-tabs 
+    margin-top: 10px
+    .tabs-title 
+      margin-bottom: 20px
+      .item
+        text-align: center
+        font-size: 14px
+        padding: 0 15px
+  .services-tabs .tabs-wrapper .wrap ,
+  .add-services.page-add-services .add-services-wrap
+    justify-content: space-between
+    .item
+      width: 100%
+      margin-bottom: 10px
+      margin-right: 0
+      padding: 10px 16px
+      p
+        font-size: 16px
+      .icon
+        margin-right: 15px
+        img
+          width: 24px
 
+.quote-page-form .date input
+  display: block
+  text-align: left
   
-
-
-
-
-
-
-
-  
-
+.team .subtitle
+  text-align: center
 
 
 

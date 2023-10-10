@@ -2,7 +2,12 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-<section class="single only-single-page page-top container">
+<section  itemscope itemtype="https://schema.org/Article" class="single only-single-page page-top container">
+	<meta itemprop="description" content="<?php the_excerpt(); ?>">
+	<meta itemprop="author" content="<?php the_author(); ?>">
+	<meta itemprop="datePublished" content="<?php the_time('c'); ?>">
+	<meta itemprop="dateModified" content="<?php the_modified_date('c'); ?>">
+	
 	<div class="single-top">
 		<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<div class="breadcrumbs blog-bread">', '</div>'); } ?>
 		<?php if (get_tags()) { ?>

@@ -49,7 +49,7 @@ get_header();
   </div>
 </section>
 
-<section class="add-services">
+<section class="add-services page-add-services">
   <div class="container">
     <h2 class="title"><?php the_field('add_services_title', 480); ?></h2>
     <div class="add-services-wrap">

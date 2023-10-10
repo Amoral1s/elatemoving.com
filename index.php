@@ -26,7 +26,7 @@
           </div>
         </div>
         <div class="offer-wrap-right">
-          <img src="<?php the_field('offer_img', 'options'); ?>" alt="<?php the_field('offer_title', 'options'); ?>">
+          <img src="<?php the_field('offer_img', 'options'); ?>" style="min-height: 280px" alt="<?php the_field('offer_title', 'options'); ?>">
         </div>
         <div class="offer-wrap-cards">
           <?php if(have_rows('offer_cards', 'options')) : while(have_rows('offer_cards', 'options')) : the_row(); ?>
@@ -307,4 +307,21 @@
   </div>
 </section>
 
+<!--Microdata-->
+<!-- <div itemscope itemtype="http://schema.org/LocalBusiness">
+    <meta itemprop="name" content="Ozhgibesov Agency">
+	<meta itemprop="priceRange" content="от 60 000 ₽">
+	<meta itemprop="description" content="Ozhgibesov Agency - SEO продвижение сайтов в Москве">
+    <meta itemprop="telephone" content="<?php the_field('phone', 'options'); ?>">
+	<meta itemprop="email" content="<?php the_field('email', 'options'); ?>">
+    <link itemprop="url" href="<?php echo get_permalink(); ?>">
+	<link itemprop="logo image" href="<?php echo get_template_directory_uri(); ?>/img/logo.svg">
+    <time itemprop="openingHours" datetime="Mo-Fr 10:00−19:00"></time>
+    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <meta itemprop="postalCode" content="394016">
+		<meta itemprop="addressCountry" content="Россия">
+        <meta itemprop="addressLocality" content="Воронеж">
+        <meta itemprop="streetAddress" content="<?php the_field('adress', 'options'); ?>">
+    </div>
+</div> -->
 <?php get_footer(); ?>

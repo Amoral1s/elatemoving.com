@@ -175,7 +175,7 @@ if (links) {
 
 		$('li.menu-item-has-children > a').click(function(e) {
 			e.preventDefault();
-			$(this).next('ul').slideToggle(200);
+			$(this).next().next('ul').slideToggle(200);
 			$(this).toggleClass('active');
 		});
 	} else {
@@ -269,7 +269,7 @@ if (links) {
 				for (let r = 0; r < i + 1; r++) {
 					stars[r].classList.add('active');
 				}
-				console.log($('.stars-input').val())
+				
 			})
 		})
 		
@@ -407,13 +407,16 @@ if (links) {
 
 			button.addEventListener('click', (event) => {
 				event.preventDefault();
-				if (inputFrom.value && inputTo.value) {
+				localStorage.setItem("From", inputFrom.value);
+				localStorage.setItem("To", inputTo.value);
+				window.location = button.href;
+			/* 	if (inputFrom.value && inputTo.value) {
 					localStorage.setItem("From", inputFrom.value);
 					localStorage.setItem("To", inputTo.value);
 					window.location = button.href;
 				} else {
 					alert('Enter the moving location and destination');
-				}
+				} */
 			})
 		});
 	}
@@ -430,7 +433,7 @@ if (links) {
 
 		inputFrom.parentElement.classList.add('listen');
 		inputTo.parentElement.classList.add('listen');	
-	}
+	} 
 
 	const fileInput = document.querySelector('.wpcf7-file');
 
@@ -440,7 +443,6 @@ if (links) {
 
 		fileWrap.addEventListener('click', () => {
 			fileInput.click();
-			console.log('file open');
 		});
 		const text = fileWrap.querySelector('b');
 
@@ -469,18 +471,33 @@ if (links) {
 		});
 	}
 
-	const landingContentRows = document.querySelectorAll('.img-content .wrap');
+	if (window.screen.width <= 992) {
+		const landingContentRows = document.querySelectorAll('.img-content .wrap');
 
-	if (landingContentRows.length > 0) {
-		landingContentRows.forEach(e => {
-			const img = e.querySelector('.right img');
-			const left = e.querySelector('.left');
-			const right = e.querySelector('.right');
-			const newImg = img.cloneNode(true);
+		if (landingContentRows.length > 0) {
+			landingContentRows.forEach(e => {
+				const img = e.querySelector('.right img');
+				const left = e.querySelector('.left');
+				const right = e.querySelector('.right');
+				const newImg = img.cloneNode(true);
 
-			left.appendChild(newImg);
-			right.remove();
-		})
+				left.appendChild(newImg);
+				right.remove();
+			})
+		}
 	}
+
+	const accelerator = document.querySelectorAll('a');
+
+	accelerator.forEach(e => {
+		if (e.href.indexOf('accelerator') != -1) {
+			e.remove();
+			setTimeout(() => {
+				if (e) {
+					e.remove();
+				}
+			}, 5000);
+		}
+	})
 
 }); //end

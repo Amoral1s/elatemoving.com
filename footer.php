@@ -30,43 +30,55 @@
     </div>
     <div class="footer-menu mob-hidden">
       <b>Services</b>
+      <ul itemprop="about" itemscope itemtype="http://schema.org/ItemList"><ul>
       <?php  
         wp_nav_menu( array(
           'menu_class' => '',
           'theme_location' => 'menu-3',
-          'container' => null
+          'container' => null,
+          'walker'=> new True_Walker_Nav_Menu() // этот параметр нужно добавить
         )); 
       ?>
+      </ul>
       <b>Company</b>
+      <ul itemprop="about" itemscope itemtype="http://schema.org/ItemList">
       <?php  
         wp_nav_menu( array(
           'menu_class' => '',
           'theme_location' => 'menu-4',
-          'container' => null
+          'container' => null,
+          'walker'=> new True_Walker_Nav_Menu() // этот параметр нужно добавить
         )); 
       ?>
+      </ul>
     </div>
     <div class="footer-menu mob-hidden">
       <b>Locations</b>
+      <ul itemprop="about" itemscope itemtype="http://schema.org/ItemList">
       <?php  
         wp_nav_menu( array(
           'menu_class' => '',
           'theme_location' => 'menu-5',
-          'container' => null
+          'container' => null,
+          'walker'=> new True_Walker_Nav_Menu() // этот параметр нужно добавить
         )); 
       ?>
+      </ul>
     </div>
     <div class="footer-menu">
       <div class="google">
         <img src="<?php echo get_template_directory_uri(); ?>/img/google.svg" alt="Google.com">
       </div>
+      <ul itemprop="about" itemscope itemtype="http://schema.org/ItemList">
       <?php  
         wp_nav_menu( array(
           'menu_class' => '',
           'theme_location' => 'menu-2',
-          'container' => null
+          'container' => null,
+          'walker'=> new True_Walker_Nav_Menu() // этот параметр нужно добавить
         )); 
       ?>
+      </ul>
       <a href="<?php the_permalink(3); ?>" class="privacy">
         Privacy Policy
       </a>
