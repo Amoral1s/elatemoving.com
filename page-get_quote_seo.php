@@ -48,6 +48,17 @@ get_header();
   </div>
 </section>
 
+<?php if (get_field('seo_title')) { ?>
+<section class="seo wow animate__animated animate__fadeInUp">
+  <div class="container">
+    <h2 class="title "><?php the_field('seo_title'); ?></h2>
+    <div class="content ">
+      <?php the_field('seo_content'); ?>
+    </div>
+  </div>
+</section>
+<?php } ?>
+
 <section class="question container wow animate__animated animate__fadeInUp">
   <div class="question-wrap ">
     <div class="left">
@@ -59,6 +70,8 @@ get_header();
     </div>
   </div>
 </section>
+
+
 
 <?php
 get_footer(); ?>

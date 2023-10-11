@@ -2,27 +2,32 @@ jQuery(document).ready(function ($) {
 	
 	
 	//Sliders
-	const reviewsSlider = document.querySelector('.reviews-wrap.swiper');
-	if (reviewsSlider) {
-		new Swiper(".reviews-wrap.swiper", {
-			/* pagination: {
-				el: '.project-pagination',
-			}, */
-			navigation: {
-				nextEl: '.reviews .arr-next',
-				prevEl: '.reviews .arr-prev',
-			},
-			breakpoints: {
-				300: {
-					slidesPerView: 1,
-					spaceBetween: 10,
+	const reviewsSlider = document.querySelectorAll('.reviews-wrap.swiper');
+	if (reviewsSlider.length > 0) {
+		reviewsSlider.forEach(elem => {
+			const arrPrev = elem.parentElement.querySelector('.arr-prev');
+			const arrNext = elem.parentElement.querySelector('.arr-next');
+			new Swiper(elem, {
+				/* pagination: {
+					el: '.project-pagination',
+				}, */
+				navigation: {
+					nextEl: arrNext,
+					prevEl: arrPrev,
 				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				}
-			},
+				breakpoints: {
+					300: {
+						slidesPerView: 1,
+						spaceBetween: 10,
+					},
+					768: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					}
+				},
+			});
 		});
+		
 	}
 	const howWorkSlider = document.querySelector('.how-wrap-slider.swiper');
 	if (howWorkSlider) {
@@ -498,6 +503,18 @@ if (links) {
 				}
 			}, 5000);
 		}
-	})
+	});
+	
+	const phonesInputs = document.querySelectorAll('.wpcf7-validates-as-tel');
+
+	if (phonesInputs.length > 0) {
+		phonesInputs.forEach(phone => {
+			phone.addEventListener('input', () => {
+				phone.value = phone.value.replace(/[^0-9\+\-\)\(]/g, '');
+			});
+		})
+	}
+
+	
 
 }); //end

@@ -3643,6 +3643,10 @@ div.asl_r * {
   width: 100%;
 }
 
+.quote-page-form .row .full {
+  width: 100%;
+}
+
 .quote-page-form .row .half {
   width: calc(50% - 8px);
 }
@@ -4555,6 +4559,29 @@ div.asl_r * {
 
 .team .subtitle {
   text-align: center;
+}
+
+.claim-form .subtitle {
+  max-width: 100%;
+}
+
+.claim-form .file {
+  margin-top: 0;
+}
+
+.input input.wpcf7-not-valid {
+  border: 1px solid #FF3D60;
+}
+
+.input .wpcf7-form-control-wrap {
+  position: relative;
+}
+
+.input .wpcf7-form-control-wrap span {
+  position: absolute;
+  color: #FF3D60;
+  font-size: 12px;
+  top: calc(100% + 6px);
 }
 
 .single .comments #wpdcom .wpd-comment-header .wpd-comment-share,

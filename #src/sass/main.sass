@@ -2844,6 +2844,8 @@ div.asl_r *
     align-items: center
     margin-bottom: 40px
     width: 100%
+    .full
+      width: 100%
     .half
       width: calc(50% - 8px)
     .third
@@ -3817,10 +3819,24 @@ div.asl_r *
 
 
 
-
-
+.claim-form
+  .subtitle
+    max-width: 100%
+  .file
+    margin-top: 0
 
   
+.input
+  input.wpcf7-not-valid
+    border: 1px solid #FF3D60
+  .wpcf7-form-control-wrap
+    position: relative
+    span
+      position: absolute
+      color: #FF3D60
+      font-size: 12px
+      top: calc(100% + 6px)
+
 
 
 
