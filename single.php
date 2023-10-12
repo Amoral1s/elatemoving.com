@@ -1,5 +1,7 @@
 <?php get_header(); ?>
-
+<?php
+$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name): get_userdata(intval($author));
+?>
 <?php while ( have_posts() ) : the_post(); ?>
 
 <section  itemscope itemtype="https://schema.org/Article" class="single only-single-page page-top container">
@@ -20,17 +22,19 @@
 		<p class="subtitle"><?php the_field('post_subtitle'); ?></p>
 		<?php } ?>
 		<div class="author">
-			<div class="avatar">
-				<?php 
-					$author_id = get_the_author_meta('user_email');
-					echo get_avatar( $author_id, $size = 60, $default = '', $alt = '', $args = null ) 
-				?>
-				<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/favicon/icon-192.png" alt="Avatar"> -->
-			</div>
-			<div class="name">
-				<p><?php the_author_meta('display_name'); ?></p>
-				<span>Author</span>
-			</div>
+			<a class="row" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>">
+				<div class="avatar">
+					<?php 
+						$author_id = get_the_author_meta('user_email');
+						echo get_avatar( $author_id, $size = 60, $default = '', $alt = '', $args = null ) 
+					?>
+					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/favicon/icon-192.png" alt="Avatar"> -->
+				</div>
+				<div class="name">
+					<p><?php the_author_meta('display_name'); ?></p>
+					<span>Author</span>
+				</div>
+			</a>
 			<!-- <?php the_author_posts_link() ?> -->
 			<div class="top-rat">
 				<div class="new-rating">

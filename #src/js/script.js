@@ -429,15 +429,18 @@ if (links) {
 
 	if (quotePage) {
 		const inputFrom = document.querySelector('input.got-from');
-		const inputTo = document.querySelector('input.got-to');
+		if (inputFrom) {
+			const inputTo = document.querySelector('input.got-to');
 
-		setTimeout(() => {
-			inputFrom.value = localStorage.getItem('From');
-			inputTo.value = localStorage.getItem('To');
-		}, 1000);
-
-		inputFrom.parentElement.classList.add('listen');
-		inputTo.parentElement.classList.add('listen');	
+			setTimeout(() => {
+				inputFrom.value = localStorage.getItem('From');
+				inputTo.value = localStorage.getItem('To');
+			}, 1000);
+	
+			inputFrom.parentElement.classList.add('listen');
+			inputTo.parentElement.classList.add('listen');	
+		}
+		
 	} 
 
 	const fileInput = document.querySelector('.wpcf7-file');
@@ -515,6 +518,44 @@ if (links) {
 		})
 	}
 
+	const inputFromMap = document.querySelector('.input-from');
+	const inputToMap = document.querySelector('.input-to');
+
+	if (inputFromMap && inputToMap) {
+		google.maps.event.addDomListener(window, 'load', initialize);
+		google.maps.event.addDomListener(window, 'load', initializeTo);
+	 
+		function initialize() {
+				var input = inputFromMap;
+				var autocomplete = new google.maps.places.Autocomplete(input);
+		}
+		function initializeTo() {
+				var input = inputToMap;
+				var autocomplete = new google.maps.places.Autocomplete(input);
+		}
+	}
+
+	const inputFromMapGOT = document.querySelector('.got-from');
+	const inputToMapGOT = document.querySelector('.got-to');
+
+	if (inputFromMapGOT && inputToMapGOT) {
+		google.maps.event.addDomListener(window, 'load', initialize);
+		google.maps.event.addDomListener(window, 'load', initializeTo);
+	 
+		function initialize() {
+				var input = inputFromMapGOT;
+				var autocomplete = new google.maps.places.Autocomplete(input);
+		}
+		function initializeTo() {
+				var input = inputToMapGOT;
+				var autocomplete = new google.maps.places.Autocomplete(input);
+		}
+	}
+
+	
+	
+	
+	
 	
 
 }); //end

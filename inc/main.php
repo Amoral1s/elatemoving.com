@@ -58,9 +58,10 @@ add_action( 'widgets_init', 'main_theme_widgets_init' );
 //Удаление стилизации CF7
 add_action( 'wpcf7_autop_or_not', '__return_false' );
 add_filter('wpcf7_form_elements', function($content) {
-	$content = preg_replace('/<(span).*?class="\s*(?:.*\s)?(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+	$content = preg_replace('/<(span)>/i', '\2', $content);
 	return $content;
 });
+ 
  
 
 if( function_exists('acf_add_options_page') ) {
@@ -108,6 +109,7 @@ function my_scripts() {
 	wp_register_script( 'jquery-core', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js');
 	//wp_register_script( 'jquery-core', get_template_directory_uri() . '/js/jquery-3.2.1.js');
 	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDkMz0P21Wa3wrOFlwx6z9VwjRAlCKty6I&libraries=places', array('jquery'), null, true );
 	wp_enqueue_script( 'wow', get_template_directory_uri() . '/js/wow.min.js', array('jquery'), null, true );
 	//wp_enqueue_script( 'magnific', get_template_directory_uri() . '/js/magnific-popup.min.js', array('jquery'), null, true );
 	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.min.js', array('jquery'), null, true );

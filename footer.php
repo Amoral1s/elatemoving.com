@@ -30,7 +30,7 @@
     </div>
     <div class="footer-menu mob-hidden">
       <b>Services</b>
-      <ul itemprop="about" itemscope itemtype="http://schema.org/ItemList"><ul>
+      <ul itemprop="about" itemscope itemtype="http://schema.org/ItemList">
       <?php  
         wp_nav_menu( array(
           'menu_class' => '',
@@ -170,6 +170,7 @@
 </div>
 
 <?php wp_footer(); ?>
+
 
 
 </body>

@@ -1,7 +1,7 @@
 <?php 
 //новая длина размера цитаты start
 function wph_excerpt_length($length) {
-	return 20; 
+	return 74; 
 }
 add_filter('excerpt_length', 'wph_excerpt_length');
 

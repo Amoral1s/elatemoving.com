@@ -2751,6 +2751,18 @@
   width: 100%;
 }
 
+.single .author .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .single .subtitle {
   max-width: 100%;
 }
@@ -4582,6 +4594,324 @@ div.asl_r * {
   color: #FF3D60;
   font-size: 12px;
   top: calc(100% + 6px);
+}
+
+.author-page-view {
+  display: block;
+  margin-bottom: 50px;
+}
+
+.author-page-view .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.author-page-view .top .right {
+  width: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.author-page-view .top .right .url {
+  display: block;
+  text-align: end;
+  font-size: 18px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.author-page-view .top .right .url:hover {
+  color: #ED6400;
+}
+
+.author-page-view .top .right .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.author-page-view .top .right .links a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  margin-left: 10px;
+}
+
+.author-page-view .top .right .links a .icon {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.author-page-view .top .right .links a:hover {
+  background-color: #ED6400;
+}
+
+.author-page-view .top .right .links a:hover svg path {
+  fill: #fff;
+}
+
+.author-page-view .top .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: calc(100% - 300px);
+}
+
+.author-page-view .top .left .title {
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.author-page-view .top .left .avatar {
+  display: block;
+  margin-right: 30px;
+}
+
+.author-page-view .top .left .avatar img {
+  margin-right: 0;
+}
+
+.author-page-view .top .left .avatar img {
+  display: block;
+  height: 120px;
+  min-width: 120px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 100%;
+}
+
+.author-page-view .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.author-page-view .bottom .left {
+  width: 300px;
+}
+
+.author-page-view .bottom .left b {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.author-page-view .bottom .left p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.author-page-view .bottom .left p span {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.author-page-view .bottom .right {
+  width: calc(100% - 300px - 60px);
+}
+
+.author-page-view .bottom .right b {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.author-page-view .bottom .right p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.author-page-news {
+  display: block;
+}
+
+.author-page-news .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-bottom: 50px;
+}
+
+.author-page-news .item .right {
+  width: calc(100% - 320px - 40px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: auto;
+}
+
+.author-page-news .item .right .wrap-bot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.author-page-news .item .right .wrap-bot small {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.author-page-news .item .right .wrap-bot div,
+.author-page-news .item .right .wrap-bot a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #FE7300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-right: 20px;
+}
+
+.author-page-news .item .right .wrap-bot div:hover,
+.author-page-news .item .right .wrap-bot a:hover {
+  color: #ED6400;
+}
+
+.author-page-news .item .right b,
+.author-page-news .item .right h3 {
+  font-size: 34px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.author-page-news .item .right p {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.author-page-news .item .left {
+  width: 320px;
+  display: block;
+}
+
+.author-page-news .item .left img {
+  width: 100%;
+  aspect-ratio: 319/222;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 24px;
+  display: block;
+}
+
+.input ul {
+  position: absolute;
+  background-color: #19242B;
+  color: #fff;
+  left: 0;
+  top: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  z-index: 10;
+}
+
+.input ul li {
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .single .comments #wpdcom .wpd-comment-header .wpd-comment-share,
@@ -6814,6 +7144,90 @@ div.asl_r.vertical {
     display: none;
   }
 
+  .author-page-view .top {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .author-page-view .top .left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .author-page-view .top .right {
+    width: 100%;
+    margin-bottom: 30px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .author-page-view .top .right .links {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .author-page-view .top .right .links a {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  .author-page-view .bottom {
+    display: block;
+  }
+
+  .author-page-view .bottom .left {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .author-page-view .bottom .right {
+    width: 100%;
+  }
+
+  .author-page-news .item {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .author-page-news .item .left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .author-page-news .item .right {
+    width: 100%;
+    display: block;
+  }
+
+  .author-page-news .item .right h3,
+  .author-page-news .item .right b {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .author-page-news .item .right p {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .author-page-news .item .right .wrap-bot {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .author-page-news .item .right .wrap-bot div,
+  .author-page-news .item .right .wrap-bot a {
+    font-size: 16px;
+  }
+
+  .author-page-news .item .right .wrap-bot small {
+    font-size: 14px;
+  }
+
   .content .wp-block-group__inner-container {
     display: block;
   }
@@ -7576,6 +7990,10 @@ div.asl_r.vertical {
   .add-services.page-add-services .add-services-wrap .item .icon {
     margin: 0;
     margin-right: 15px;
+  }
+
+  .single .author .row {
+    width: 100%;
   }
 
   .content .wp-block-group__inner-container .wp-block-image {
@@ -8591,6 +9009,35 @@ div.asl_r.vertical {
   .services-tabs .tabs-wrapper .wrap .item .icon img,
   .add-services.page-add-services .add-services-wrap .item .icon img {
     width: 24px;
+  }
+
+  .author-page-view .top .left {
+    display: block;
+  }
+
+  .author-page-view .top .left .avatar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .author-page-view .top .left .avatar img {
+    min-width: 120px;
+    width: 120px;
+    height: 120px;
+    margin: 0;
+  }
+
+  .author-page-view .top .left .title {
+    margin-bottom: 0;
+    font-size: 34px;
+    width: 100%;
   }
 
   .single .author {
