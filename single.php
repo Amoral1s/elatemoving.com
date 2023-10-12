@@ -4,11 +4,12 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name): ge
 ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
-<section  itemscope itemtype="https://schema.org/Article" class="single only-single-page page-top container">
-	<meta itemprop="description" content="<?php the_excerpt(); ?>">
-	<meta itemprop="author" content="<?php the_author(); ?>">
-	<meta itemprop="datePublished" content="<?php the_time('c'); ?>">
-	<meta itemprop="dateModified" content="<?php the_modified_date('c'); ?>">
+<section itemid="<?php echo get_permalink(); ?>" itemscope itemtype="http://schema.org/BlogPosting" class="single only-single-page page-top container">
+		<meta itemprop="description" content="<?php the_excerpt(); ?>">
+		<link itemprop="image" href="<?php echo get_template_directory_uri(); ?>/img/logo.svg">
+		<meta itemprop="author" content="<?php the_author(); ?>">
+		<meta itemprop="datePublished" content="<?php the_time('c'); ?>">
+		<meta itemprop="dateModified" content="<?php the_modified_date('c'); ?>">
 	
 	<div class="single-top">
 		<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<div class="breadcrumbs blog-bread">', '</div>'); } ?>
@@ -17,7 +18,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name): ge
 			<?php the_tags( '','',''); ?>
 		</div>
 		<?php } ?>
-		<h1 class="page-title"><?php the_title(); ?></h1>
+		<h1 itemprop="headline" class="page-title"><?php the_title(); ?></h1>
 		<?php if (get_field('post_subtitle')) { ?>
 		<p class="subtitle"><?php the_field('post_subtitle'); ?></p>
 		<?php } ?>
@@ -30,17 +31,20 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name): ge
 					?>
 					<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/favicon/icon-192.png" alt="Avatar"> -->
 				</div>
-				<div class="name">
+				<div itemprop="author" class="name">
 					<p><?php the_author_meta('display_name'); ?></p>
 					<span>Author</span>
 				</div>
 			</a>
 			<!-- <?php the_author_posts_link() ?> -->
 			<div class="top-rat">
+				<itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+				<meta itemprop="bestRating" content="5">
+				<meta itemprop="ratingValue" content="5">
 				<div class="new-rating">
 				
 				</div>
-				<div class="votes">
+				<div itemprop="ratingCount" class="votes">
 
 				</div>
 			</div>
@@ -83,7 +87,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name): ge
 	<div class="content">
 		<?php the_content(); ?>
 	</div>
-	<div class="comments">
+	<div  class="comments">
 		<?php comments_template(); ?>
 	</div>
 </section>
@@ -128,5 +132,22 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name): ge
 </section>
 
 <?php endwhile; ?>
+
+
+<main class="page">
+	<div itemscope itemtype="http://schema.org/Article" class="single container">
+		<h1 itemprop="name headline" class="title">
+			<?php the_title() ?>
+		</h1>
+		<meta itemprop="description" content="<?php the_excerpt(); ?>">
+		<meta itemprop="author" content="<?php the_author(); ?>">
+		<meta itemprop="datePublished" content="<?php the_time('c'); ?>">
+		<meta itemprop="dateModified" content="<?php the_modified_date('c'); ?>">
+		<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="<?php echo get_permalink(); ?>" content=""/>
+		<div itemprop="articleBody" class="single-content">
+			<?php the_content() ?>
+		</div>
+	</div>
+</main>
 
 <?php get_footer();

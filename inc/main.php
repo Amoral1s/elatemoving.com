@@ -109,15 +109,15 @@ function my_scripts() {
 	wp_register_script( 'jquery-core', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js');
 	//wp_register_script( 'jquery-core', get_template_directory_uri() . '/js/jquery-3.2.1.js');
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDkMz0P21Wa3wrOFlwx6z9VwjRAlCKty6I&libraries=places', array('jquery'), null, true );
+	//wp_enqueue_script( 'maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDkMz0P21Wa3wrOFlwx6z9VwjRAlCKty6I&libraries=places', array('jquery'), null, true );
 	wp_enqueue_script( 'wow', get_template_directory_uri() . '/js/wow.min.js', array('jquery'), null, true );
 	//wp_enqueue_script( 'magnific', get_template_directory_uri() . '/js/magnific-popup.min.js', array('jquery'), null, true );
 	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.min.js', array('jquery'), null, true );
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/script.js', array('jquery'), null, true );
 }
 
-@ini_set( 'upload_max_size' , '1164M' );
-@ini_set( 'post_max_size', '1164M');
+@ini_set( 'upload_max_size' , '512M' );
+@ini_set( 'post_max_size', '1024M');
 @ini_set( 'max_execution_time', '3000' );
 
 add_filter( 'upload_mimes', 'svg_upload_allow' );

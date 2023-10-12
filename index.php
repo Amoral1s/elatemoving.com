@@ -307,21 +307,35 @@
   </div>
 </section>
 
-<!--Microdata-->
-<!-- <div itemscope itemtype="http://schema.org/LocalBusiness">
-    <meta itemprop="name" content="Ozhgibesov Agency">
-	<meta itemprop="priceRange" content="от 60 000 ₽">
-	<meta itemprop="description" content="Ozhgibesov Agency - SEO продвижение сайтов в Москве">
-    <meta itemprop="telephone" content="<?php the_field('phone', 'options'); ?>">
+<!--Microdata Local-->
+<div itemscope itemtype="http://schema.org/LocalBusiness">
+  <meta itemprop="name" content="Elate Moving | Professional Moving Services">
+	<!-- <meta itemprop="priceRange" content="от 60 000 ₽"> -->
+	<meta itemprop="description" content="Elate Moving is a professional moving and storage company with the most trustworthy, dedicated, expert and white glove NYC movers.">
+  <meta itemprop="telephone" content="<?php the_field('phone', 'options'); ?>">
 	<meta itemprop="email" content="<?php the_field('email', 'options'); ?>">
-    <link itemprop="url" href="<?php echo get_permalink(); ?>">
+  <link itemprop="url" href="<?php echo get_home_url(null); ?>">
 	<link itemprop="logo image" href="<?php echo get_template_directory_uri(); ?>/img/logo.svg">
-    <time itemprop="openingHours" datetime="Mo-Fr 10:00−19:00"></time>
-    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-        <meta itemprop="postalCode" content="394016">
-		<meta itemprop="addressCountry" content="Россия">
-        <meta itemprop="addressLocality" content="Воронеж">
-        <meta itemprop="streetAddress" content="<?php the_field('adress', 'options'); ?>">
-    </div>
-</div> -->
+  <time itemprop="openingHours" datetime="Mo-Fr 09:00−18:00"></time>
+  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <meta itemprop="addressCountry" content="US">
+    <meta itemprop="addressLocality" content="New York">
+    <meta itemprop="streetAddress" content="305 Broadway Floor 7 New York, NY 10007">
+  </div>
+</div>
+<!--Microdata organisation-->
+<div itemscope itemtype="http://schema.org/Organization">
+  <meta itemprop="name" content="Elate Moving | Professional Moving Services">
+	<!-- <meta itemprop="priceRange" content="от 60 000 ₽"> -->
+	<meta itemprop="description" content="Elate Moving is a professional moving and storage company with the most trustworthy, dedicated, expert and white glove NYC movers.">
+  <meta itemprop="telephone" content="<?php the_field('phone', 'options'); ?>">
+	<meta itemprop="email" content="<?php the_field('email', 'options'); ?>">
+  <link itemprop="url" href="<?php echo get_home_url(null); ?>">
+	<link itemprop="logo image" href="<?php echo get_template_directory_uri(); ?>/img/logo.svg">
+  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <meta itemprop="addressCountry" content="US">
+    <meta itemprop="addressLocality" content="New York">
+    <meta itemprop="streetAddress" content="305 Broadway Floor 7 New York, NY 10007">
+  </div>
+</div>
 <?php get_footer(); ?>
