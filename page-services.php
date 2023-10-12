@@ -5,7 +5,12 @@
 
 get_header();
 ?>
-<section class="all-services page-top">
+<section itemscope itemtype="https://schema.org/Service" class="all-services page-top">
+<?php $my_descr = get_post_meta($post->ID, "_yoast_wpseo_metadesc", true); ?>
+	<meta itemprop="description" content="<?php echo $my_descr; ?>">
+	<div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+      <meta itemprop="priceCurrency" content="USD">
+      <link itemprop="availability" href="http://schema.org/InStock">
   <div class="container">
     <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<div class="breadcrumbs">', '</div>'); } ?>
     <h1 class="page-title title-sub"><?php the_title(); ?></h1>
@@ -32,7 +37,7 @@ get_header();
           <?php if(have_rows('types_of_transportation')) : while(have_rows('types_of_transportation')) : the_row(); ?>
           <a href="<?php the_sub_field('link'); ?>" class="item">
             <div class="icon"><img src="<?php the_sub_field('icon'); ?>" alt="icon"></div>
-            <p><?php the_sub_field('title'); ?></p>
+            <p  itemprop="name"><?php the_sub_field('title'); ?></p>
           </a>
           <?php endwhile; endif; ?>
         </div>
@@ -40,7 +45,7 @@ get_header();
           <?php if(have_rows('object_of_transportation')) : while(have_rows('object_of_transportation')) : the_row(); ?>
           <a href="<?php the_sub_field('link'); ?>" class="item">
             <div class="icon"><img src="<?php the_sub_field('icon'); ?>" alt="icon"></div>
-            <p><?php the_sub_field('title'); ?></p>
+            <p  itemprop="name"><?php the_sub_field('title'); ?></p>
           </a>
           <?php endwhile; endif; ?>
         </div>

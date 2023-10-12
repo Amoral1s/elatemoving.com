@@ -16,14 +16,14 @@ get_header();
         Ask a question
       </a>
     </div>
-    <div class="faq-costs">
+    <div  itemscope itemtype="https://schema.org/FAQPage" class="faq-costs">
       <?php if(have_rows('faq')) : while(have_rows('faq')) : the_row(); ?>
-      <div class="wrapper">
-        <h2 class="title"><?php the_sub_field('title'); ?></h2>
+      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="wrapper">
+        <h2  class="title"><?php the_sub_field('title'); ?></h2>
         <?php if(have_rows('questions')) : while(have_rows('questions')) : the_row(); ?>
         <div class="item">
-          <b class="faq-toggle"><?php the_sub_field('q_title'); ?></b>
-          <div class="content"><?php the_sub_field('q_content'); ?></div>
+          <b  itemprop="name" class="faq-toggle"><?php the_sub_field('q_title'); ?></b>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="content"><span  itemprop="text" ><?php the_sub_field('q_content'); ?></span></div>
         </div>
         <?php endwhile; endif; ?>
       </div>
