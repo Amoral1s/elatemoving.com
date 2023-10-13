@@ -111,7 +111,6 @@
 	<meta itemprop="email" content="<?php the_field('email', 'options'); ?>">
   <link itemprop="url" href="<?php echo get_permalink(); ?>">
 	<link itemprop="logo image" href="<?php echo get_template_directory_uri(); ?>/img/logo.svg">
-  <time itemprop="openingHours" datetime="Mo-Fr 09:00−18:00"></time>
   <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
     <meta itemprop="addressCountry" content="US">
     <meta itemprop="addressLocality" content="New York">

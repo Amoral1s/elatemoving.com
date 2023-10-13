@@ -310,10 +310,6 @@ get_header();
 	<meta itemprop="email" content="<?php the_field('email', 'options'); ?>">
   <link itemprop="url" href="<?php echo get_permalink(); ?>">
 	<link itemprop="logo image" href="<?php echo get_template_directory_uri(); ?>/img/logo.svg">
-<<<<<<< HEAD
-=======
-  <time itemprop="openingHours" datetime="Mo-Fr 09:00−18:00"></time>
->>>>>>> ea0fff5f43a7dab321fb0ddc4c54a17a714ec82f
   <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
     <meta itemprop="addressCountry" content="US">
     <meta itemprop="addressLocality" content="New York">
