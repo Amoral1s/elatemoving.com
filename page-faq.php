@@ -16,6 +16,7 @@ get_header();
         Ask a question
       </a>
     </div>
+<<<<<<< HEAD
     <div itemscope itemtype="https://schema.org/FAQPage" class="faq-costs">
       <?php if(have_rows('faq')) : while(have_rows('faq')) : the_row(); ?>
       <div class="wrapper">
@@ -23,6 +24,15 @@ get_header();
         <?php if(have_rows('questions')) : while(have_rows('questions')) : the_row(); ?>
         <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="item">
           <b itemprop="name" class="faq-toggle"><?php the_sub_field('q_title'); ?></b>
+=======
+    <div  itemscope itemtype="https://schema.org/FAQPage" class="faq-costs">
+      <?php if(have_rows('faq')) : while(have_rows('faq')) : the_row(); ?>
+      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="wrapper">
+        <h2  class="title"><?php the_sub_field('title'); ?></h2>
+        <?php if(have_rows('questions')) : while(have_rows('questions')) : the_row(); ?>
+        <div class="item">
+          <b  itemprop="name" class="faq-toggle"><?php the_sub_field('q_title'); ?></b>
+>>>>>>> ea0fff5f43a7dab321fb0ddc4c54a17a714ec82f
           <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="content"><span  itemprop="text" ><?php the_sub_field('q_content'); ?></span></div>
         </div>
         <?php endwhile; endif; ?>
