@@ -28,7 +28,7 @@
         </a> 
       </div> 
     </div>
-    <div class="footer-menu mob-hidden">
+    <div itemscope itemtype="http://schema.org/SiteNavigationElement" class="footer-menu mob-hidden">
       <b>Services</b>
       <ul itemprop="about" itemscope itemtype="http://schema.org/ItemList">
       <?php  
@@ -52,7 +52,7 @@
       ?>
       </ul>
     </div>
-    <div class="footer-menu mob-hidden">
+    <div itemscope itemtype="http://schema.org/SiteNavigationElement" class="footer-menu mob-hidden">
       <b>Locations</b>
       <ul itemprop="about" itemscope itemtype="http://schema.org/ItemList">
       <?php  
@@ -65,7 +65,7 @@
       ?>
       </ul>
     </div>
-    <div class="footer-menu">
+    <div itemscope itemtype="http://schema.org/SiteNavigationElement" class="footer-menu">
       <div class="google">
         <img src="<?php echo get_template_directory_uri(); ?>/img/google.svg" alt="Google.com">
       </div>

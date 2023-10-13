@@ -4,7 +4,7 @@
 	}
 ?>
 
-<div id="comments" class="comments-area">
+<div itemprop="comment" itemscope itemtype="https://schema.org/Comment" id="comments" class="comments-area">
 
 	<?php
 	// You can start editing here -- including this comment!

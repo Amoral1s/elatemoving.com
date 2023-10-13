@@ -5,7 +5,13 @@
 
 get_header();
 ?>
-<section class="blog-page page-top">
+<section itemscope itemtype="http://schema.org/BlogPosting"  class="blog-page page-top">
+<link itemprop="image" href="<?php echo get_template_directory_uri(); ?>/img/logo.svg">
+	<link itemprop="url" href="<?php echo get_permalink(); ?>">
+	<meta itemprop="description" content="<?php the_excerpt(); ?>">
+	<meta itemprop="author" content="<?php the_author(); ?>">
+	<meta itemprop="datePublished" content="<?php the_time('c'); ?>">
+	<meta itemprop="dateModified" content="<?php the_modified_date('c'); ?>">
   <div class="container">
     <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<div class="breadcrumbs">', '</div>'); } ?>
     <h1 class="page-title title-sub"><?php the_archive_title() ?></h1>

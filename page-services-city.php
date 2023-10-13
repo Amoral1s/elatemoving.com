@@ -8,7 +8,12 @@ get_header();
 ?>
 
 <?php global $post; $id = get_queried_object_id(); ?>
-<section class="service hide-bc service-city page-top">
+<section itemscope itemtype="https://schema.org/Service"  class="service hide-bc service-city page-top">
+<?php $my_descr = get_post_meta($post->ID, "_yoast_wpseo_metadesc", true); ?>
+	<meta itemprop="description" content="<?php echo $my_descr; ?>">
+	<div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+      <meta itemprop="priceCurrency" content="USD">
+      <link itemprop="availability" href="http://schema.org/InStock">
   <div class="container">
     <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<div class="breadcrumbs">', '</div>'); } ?>
     <div class="service-offer">
