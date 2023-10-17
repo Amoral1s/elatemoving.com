@@ -37,8 +37,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name): ge
 				</div>
 			</a>
 			<!-- <?php the_author_posts_link() ?> -->
-			<div class="top-rat">
-				<itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+			<div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating" class="top-rat">
 				<meta itemprop="bestRating" content="5">
 				<meta itemprop="ratingValue" content="5">
 				<div class="new-rating">
