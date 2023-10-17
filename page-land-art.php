@@ -255,7 +255,7 @@ get_header();
 </section>
 
 <?php if (get_field('dest_title')) { ?>
-<section class="destination row-dest wow animate__animated animate__fadeInUp">
+<section class="destination wow animate__animated animate__fadeInUp">
   <div class="container">
     <h2 class="title "><?php the_field('dest_title'); ?></h2>
     <div class="destination-wrap ">
@@ -263,16 +263,16 @@ get_header();
     <ul>
       <?php if(have_rows('columns')) : while(have_rows('columns')) : the_row(); ?>
       <li>
-        <?php if (!get_field('text_links')) { ?>
+        <?php if (get_sub_field('link')) { ?>
         <a href="<?php the_sub_field('link'); ?>"><?php the_sub_field('name'); ?></a>
         <?php } else { ?>
         <div><?php the_sub_field('name'); ?></div>
-        
         <?php } ?>
       </li>
       <?php endwhile; endif; ?>
     </ul>
     <?php endwhile; endif; ?>
+
     </div>
   </div>
 </section>

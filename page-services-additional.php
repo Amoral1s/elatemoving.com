@@ -250,7 +250,13 @@ get_header();
     <?php if(have_rows('destinations', 'options')) : while(have_rows('destinations', 'options')) : the_row(); ?>
     <ul>
       <?php if(have_rows('columns')) : while(have_rows('columns')) : the_row(); ?>
-      <li><a href="<?php the_sub_field('link'); ?>"><?php the_sub_field('name'); ?></a></li>
+      <li>
+        <?php if (get_sub_field('link')) { ?>
+        <a href="<?php the_sub_field('link'); ?>"><?php the_sub_field('name'); ?></a>
+        <?php } else { ?>
+        <div><?php the_sub_field('name'); ?></div>
+        <?php } ?>
+      </li>
       <?php endwhile; endif; ?>
     </ul>
     <?php endwhile; endif; ?>

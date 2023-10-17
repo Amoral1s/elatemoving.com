@@ -4,7 +4,6 @@
 @include('inc/seo.php');
 
 
-show_admin_bar(true);
 
 
 
